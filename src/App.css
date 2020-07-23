@@ -1,23 +1,32 @@
 .Nav {
-  position: fixed;
   top: 0;
+  left: 0;
+  position: fixed;
+  background: #1b242f;
+  border-bottom: 3px solid #04c2c9;
+  height: 50px;
+  text-align: left;
   width: 100%;
-  background-color: brown;
+  z-index: 99;
 }
 
-.Nav ul {
-  list-style: none;
-  text-align: right;
-}
-.Nav ul li {
-  color: black;
-  font-size: 2em;
-  padding-right: 20px;
-  display: inline;
+  .link-wrapper{
+    text-indent: 40px;
+    top: 30%;
+    color: white;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
 }
 
-.Nav > .active {
-  color: aqua;
+.link-wrapper a {
+  padding: 10px;
+  font-size: large;
+  font-weight: bold;
+}
+
+.Nav .link-wrapper > .active {
+  color: #04c2c9 !important;
 }
 
 .home {

@@ -5,6 +5,7 @@ export default class Nav extends Component {
   render() {
     return (
       <div className="Nav">
+        <div className="link-wrapper">
           <Link
             activeClass="active"
             to="home"
@@ -12,8 +13,10 @@ export default class Nav extends Component {
             smooth={true}
             offset={0}
             duration={500}
-          > Home
-          </Link >
+          >
+            {" "}
+            Home
+          </Link>
           <Link
             activeClass="active"
             to="about"
@@ -58,6 +61,7 @@ export default class Nav extends Component {
             {" "}
             Contact{" "}
           </Link>
+        </div>
       </div>
     );
   }
