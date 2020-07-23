@@ -31,7 +31,6 @@
 
 .home {
   height: 100vh;
-  background-color: aliceblue;
 }
 
 .about {
@@ -52,4 +51,8 @@
 .contact {
   height: 100vh;
   background-color: blue;
+}
+
+#tsparticles {
+height: 100vh;
 }
