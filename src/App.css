@@ -10,13 +10,13 @@
   z-index: 99;
 }
 
-  .link-wrapper{
-    text-indent: 40px;
-    top: 30%;
-    color: white;
-    overflow: hidden;
-    position: absolute;
-    width: 100%;
+.link-wrapper {
+  text-indent: 40px;
+  top: 30%;
+  color: white;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
 }
 
 .link-wrapper a {
@@ -35,24 +35,52 @@
 
 .about {
   height: 100vh;
-  background-color: tomato;
+  background-color: white;
 }
 
 .portfolio {
   height: 100vh;
-  background-color: chocolate;
+  background-color: #ece9e9;
 }
 
 .blog {
   height: 100vh;
-  background-color: crimson;
+  background-color: white;
 }
 
 .contact {
   height: 100vh;
-  background-color: blue;
+  background-color: #ece9e9;
 }
 
 #tsparticles {
-height: 100vh;
+  height: 100vh;
+}
+
+.flex {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: fit-content;
+}
+
+.text {
+  text-align: center;
+  font-size: 32pt;
+  font-family: "Lucida Console", Courier, monospace;
+  color: white;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
+}
+
+.highlight {
+font-weight: bold;
+font-size: 40pt;
+color: #c90460;
+-webkit-text-stroke-color: aqua;
 }
