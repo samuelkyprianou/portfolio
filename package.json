@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -11,7 +12,8 @@
     "react-particles-js": "^3.3.0",
     "react-scripts": "3.4.1",
     "react-scroll": "^1.8.0",
-    "react-tsparticles": "^1.17.3"
+    "react-tsparticles": "^1.17.3",
+    "semantic-ui-react": "^1.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
