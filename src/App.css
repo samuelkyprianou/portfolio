@@ -1,7 +1,11 @@
+body {
+  font-family: "Lucida Console", Courier, monospace;
+}
+
 .Nav {
   top: 0;
   left: 0;
-  position: fixed;
+  position: sticky;
   background: #1b242f;
   border-bottom: 3px solid #04c2c9;
   height: 50px;
@@ -31,11 +35,17 @@
 
 .home {
   height: 100vh;
+  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .about {
-  height: 100vh;
+  
   background-color: white;
+  padding: 50px;
+  position: relative;
 }
 
 .portfolio {
@@ -55,18 +65,18 @@
 
 #tsparticles {
   height: 100vh;
+  position: absolute;
+  width: 100%;
 }
 
-.flex {
+#home-title {
+  position: absolute;
+  top: 40%;
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
-  width: fit-content;
+  max-width: 100% !important;
 }
 
 .text {
@@ -76,37 +86,61 @@
   color: white;
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: black;
+  height: 150px;
 }
 
 .highlight {
-font-weight: bold;
-font-size: 40pt;
-color: #c90460;
--webkit-text-stroke-color: aqua;
+  font-weight: bold;
+  font-size: 40pt;
+  color: #c90460;
+  -webkit-text-stroke-color: aqua;
 }
 
-#cut-diamond {
-  border-style: solid;
-  border-color: transparent transparent red transparent;
-  border-width: 0 25px 25px 25px;
-  height: 0;
-  width: 50px;
-  box-sizing: content-box;
+.circle {
+  height: 150px;
+  width: 150px;
+  shape-outside: circle();
+  clip-path: circle();
+  background: linear-gradient(to top right, #04c2c9, #04c2c96e);
+  margin: auto;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ui.grid {
+  text-align: center;
+  width: inherit;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 100px;
+  font-size: 30pt;
   position: relative;
-  margin: 20px 0 50px 0;
-}
-#cut-diamond:after {
-  content: "";
-  position: absolute;
-  top: 25px;
-  left: -25px;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-color: red transparent transparent transparent;
-  border-width: 70px 50px 0 50px;
 }
 
-.title{
+.ui.fluid.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.column {
   text-align: center;
 }
+
+.skills {
+  margin-top: 20px;
+  font-size: x-large;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.huge.icon, i.huge.icons {
+  font-size: 6em !important;
+  margin: 0 !important;
+}
+

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Particles from "react-tsparticles";
-import Button from "@material-ui/core/Button";
+import { Button, Container } from "semantic-ui-react";
 
 export default class Home extends Component {
   render() {
@@ -278,15 +278,15 @@ export default class Home extends Component {
             pauseOnBlur: true,
           }}
         />
-        <div className="flex">
+        <Container text id="home-title" textAlign="center">
           <div className="text">
-            Hello, I'm <span className="highlight">Sam Kyprianou</span>.{" "}
-            <br></br>I'm a full-stack web developer.
+            <p>Hello, I'm <span className="highlight">Sam Kyprianou</span>.{" "}
+            <br></br>I'm a full-stack web developer. </p>
+          <Button inverted color='teal'>
+        My Work
+      </Button>
           </div>
-          <Button variant="outlined" color="secondary">
-            Secondary
-          </Button>
-        </div>
+      </Container>
       </div>
     );
   }
