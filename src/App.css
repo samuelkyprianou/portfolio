@@ -44,7 +44,7 @@ body {
 .about {
   
   background-color: white;
-  padding: 50px;
+  padding: 60px;
   position: relative;
 }
 
@@ -71,12 +71,12 @@ body {
 
 #home-title {
   position: absolute;
-  top: 40%;
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   max-width: 100% !important;
+  margin: auto !important;
 }
 
 .text {
@@ -86,7 +86,6 @@ body {
   color: white;
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: black;
-  height: 150px;
 }
 
 .highlight {
@@ -100,7 +99,7 @@ body {
   height: 150px;
   width: 150px;
   shape-outside: circle();
-  clip-path: circle();
+  clip-path: circle(50.0% at 50% 50%);
   background: linear-gradient(to top right, #04c2c9, #04c2c96e);
   margin: auto;
   align-items: center;
@@ -108,6 +107,14 @@ body {
   flex-direction: column;
   justify-content: center;
 }
+.animated{
+  clip-path: circle(0.0% at 50% 50%);
+  transition: clip-path 2s;
+}
+.expand{
+  clip-path: circle(50.0% at 50% 50%);
+}
+
 
 .ui.grid {
   text-align: center;
@@ -117,8 +124,9 @@ body {
 .title {
   text-align: center;
   margin-bottom: 100px;
-  font-size: 30pt;
+  font-size: 40pt;
   position: relative;
+  font-weight: 600;
 }
 
 .ui.fluid.container {
@@ -144,3 +152,15 @@ body {
   margin: 0 !important;
 }
 
+.profile{
+  width: 70%;
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  transition: clip-path 1s;
+}
+.profile:hover{
+  clip-path: polygon(30% 0%, 70% 0%, 100% 0, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 0);
+}
+
+.ui.grid+.grid {
+  margin-top: 3rem;
+}
