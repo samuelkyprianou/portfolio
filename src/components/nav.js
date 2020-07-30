@@ -3,9 +3,24 @@ import { Link } from "react-scroll";
 
 
 export default class Nav extends Component {
+    componentDidMount(){
+        window.addEventListener('scroll', () => {
+            const isTop = window.scrollY > 734;
+            const nav = document.getElementById('Nav');
+            if (isTop){
+                nav.classList.add('scrolled')
+            } else {
+                nav.classList.remove('scrolled')
+            }
+        })
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll')
+    }
   render() {
     return (
-      <div className="Nav">
+      <nav id="Nav" className="flex desk">
         <div className="link-wrapper">
           <Link
             activeClass="active"
@@ -63,7 +78,7 @@ export default class Nav extends Component {
             Contact{" "}
           </Link>
         </div>
-      </div>
+      </nav>
     );
   }
 }

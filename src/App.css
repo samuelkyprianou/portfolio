@@ -2,16 +2,29 @@ body {
   font-family: "Lucida Console", Courier, monospace;
 }
 
-.Nav {
-  top: 0;
+nav {
+  bottom: 0;
   left: 0;
-  position: sticky;
+  position: absolute;
   background: #1b242f;
   border-bottom: 3px solid #04c2c9;
   height: 50px;
   text-align: left;
   width: 100%;
   z-index: 99;
+  transition: 1s;
+}
+.flex {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+nav.scrolled {
+  bottom: inherit;
+  left: 0;
+  position: fixed;
+  top: 0;
 }
 
 .link-wrapper {
@@ -29,22 +42,21 @@ body {
   font-weight: bold;
 }
 
-.Nav .link-wrapper > .active {
+nav .link-wrapper > .active {
   color: #04c2c9 !important;
 }
 
 .home {
   height: 100vh;
   align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .about {
-  
   background-color: white;
-  padding: 60px;
+  padding: 60px 20px 20px;
   position: relative;
 }
 
@@ -99,7 +111,7 @@ body {
   height: 150px;
   width: 150px;
   shape-outside: circle();
-  clip-path: circle(50.0% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
   background: linear-gradient(to top right, #04c2c9, #04c2c96e);
   margin: auto;
   align-items: center;
@@ -107,19 +119,14 @@ body {
   flex-direction: column;
   justify-content: center;
 }
-.animated{
-  clip-path: circle(0.0% at 50% 50%);
+.animated-circle {
+  clip-path: circle(0% at 50% 50%);
   transition: clip-path 2s;
 }
-.expand{
-  clip-path: circle(50.0% at 50% 50%);
+.expand {
+  clip-path: circle(50% at 50% 50%);
 }
 
-
-.ui.grid {
-  text-align: center;
-  width: inherit;
-}
 
 .title {
   text-align: center;
@@ -129,16 +136,6 @@ body {
   font-weight: 600;
 }
 
-.ui.fluid.container {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.column {
-  text-align: center;
-}
 
 .skills {
   margin-top: 20px;
@@ -147,20 +144,84 @@ body {
   margin-bottom: 15px;
 }
 
-.huge.icon, i.huge.icons {
+.huge.icon,
+i.huge.icons {
   font-size: 6em !important;
   margin: 0 !important;
 }
 
-.profile{
-  width: 70%;
-  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+.profile {
+  width: 100%;
+  clip-path: polygon(
+    30% 0%,
+    70% 0%,
+    100% 30%,
+    100% 70%,
+    70% 100%,
+    30% 100%,
+    0% 70%,
+    0% 30%
+  );
   transition: clip-path 1s;
 }
-.profile:hover{
-  clip-path: polygon(30% 0%, 70% 0%, 100% 0, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 0);
+.profile:hover {
+  clip-path: polygon(
+    30% 0%,
+    70% 0%,
+    100% 0,
+    100% 100%,
+    70% 100%,
+    30% 100%,
+    0 100%,
+    0 0
+  );
 }
 
-.ui.grid+.grid {
-  margin-top: 3rem;
+
+.ui.grid + .grid {
+  margin-top: 6rem;
+}
+
+#blurb {
+  font-size: 13pt;
+}
+
+.skills.who {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 30pt;
+}
+
+.piechart{
+  width: 50%;
+}
+
+
+
+#pie-list ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#pie-list li {
+  line-height: 50px;
+  height: 50px;
+  font-size: 13pt;
+}
+
+#profile {
+  margin: 80px 0px;
+  padding: 20px 0px;
+  border-top: outset;
+  border-bottom: outset;
+  border-color: #00000021;
+  background-color: azure;
+}
+
+.blurb{
+  
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
 }

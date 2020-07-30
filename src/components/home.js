@@ -1,10 +1,14 @@
 import React, { Component } from "react";
 import Particles from "react-tsparticles";
 import { Button, Container } from "semantic-ui-react";
+import ScrollAnimation from "react-animate-on-scroll";
+import Nav from "./nav"
+
 
 export default class Home extends Component {
   render() {
     return (
+        <div>
       <div className="home">
         <Particles
           id="tsparticles"
@@ -279,6 +283,7 @@ export default class Home extends Component {
           }}
         />
         <Container text id="home-title" textAlign="center">
+        <ScrollAnimation animateIn="fadeInUp" delay={1000}>
           <div className="text">
             <p>Hello, I'm <span className="highlight">Sam Kyprianou</span>.{" "}
             <br></br>I'm a full-stack web developer. </p>
@@ -286,7 +291,10 @@ export default class Home extends Component {
         My Work
       </Button>
           </div>
+      </ScrollAnimation>
       </Container>
+      </div>
+      <Nav />
       </div>
     );
   }
