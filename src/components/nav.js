@@ -1,82 +1,99 @@
 import React, { Component } from "react";
 import { Link } from "react-scroll";
 
+export default class Navb extends Component {
+  navSlide = () => {
+    const nav = document.getElementById("nav-links");
+    const navLinks = document.querySelectorAll(".nav-links li");
+    nav.classList.toggle("nav-active");
+    navLinks.forEach((link, index) => {
+      if (link.style.animation) {
+        link.style.animation = "";
+      } else {
+        link.style.animation = `navLinkFade 0.5s ease forwards ${
+          index / 8 + 0.5
+        }s`;
+      }
+    });
+  };
 
-export default class Nav extends Component {
-    componentDidMount(){
-        window.addEventListener('scroll', () => {
-            const isTop = window.scrollY > 734;
-            const nav = document.getElementById('Nav');
-            if (isTop){
-                nav.classList.add('scrolled')
-            } else {
-                nav.classList.remove('scrolled')
-            }
-        })
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('scroll')
-    }
   render() {
     return (
-      <nav id="Nav" className="flex desk">
-        <div className="link-wrapper">
-          <Link
-            activeClass="active"
-            to="home"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-          >
-            {" "}
-            Home
-          </Link>
-          <Link
-            activeClass="active"
-            to="about"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-          >
-            {" "}
-            About{" "}
-          </Link>
-          <Link
-            activeClass="active"
-            to="portfolio"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-          >
-            {" "}
-            Portfolio{" "}
-          </Link>
-          <Link
-            activeClass="active"
-            to="blog"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-          >
-            {" "}
-            Blog{" "}
-          </Link>
-          <Link
-            activeClass="active"
-            to="contact"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-          >
-            {" "}
-            Contact{" "}
-          </Link>
+      <nav className="nav">
+        <div className="logo">
+          {" "}
+          <h4>The Nav</h4>
+        </div>
+        <ul className="nav-links" id="nav-links">
+          <li>
+            <Link
+              activeClass="active"
+              to="home"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
+              home
+            </Link>
+          </li>
+          <li>
+            <Link
+              activeClass="active"
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
+              {" "}
+              About{" "}
+            </Link>
+          </li>
+          <li>
+            <Link
+              activeClass="active"
+              to="portfolio"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
+              {" "}
+              Portfolio{" "}
+            </Link>
+          </li>
+          <li>
+            <Link
+              activeClass="active"
+              to="blog"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
+              {" "}
+              Blog{" "}
+            </Link>
+          </li>
+          <li>
+            <Link
+              activeClass="active"
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
+              {" "}
+              Contact{" "}
+            </Link>
+          </li>
+        </ul>
+        <div className="burger" id="burger" onClick={() => this.navSlide()}>
+          <div className="line1"></div>
+          <div className="line2"></div>
+          <div className="line3"></div>
         </div>
       </nav>
     );

@@ -2,48 +2,98 @@ body {
   font-family: "Lucida Console", Courier, monospace;
 }
 
-nav {
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  background: #1b242f;
-  border-bottom: 3px solid #04c2c9;
-  height: 50px;
-  text-align: left;
-  width: 100%;
-  z-index: 99;
-  transition: 1s;
-}
-.flex {
-  align-items: center;
+.nav {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-nav.scrolled {
-  bottom: inherit;
-  left: 0;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  z-index: 5;
   position: fixed;
-  top: 0;
-}
-
-.link-wrapper {
-  text-indent: 40px;
-  top: 30%;
-  color: white;
-  overflow: hidden;
-  position: absolute;
   width: 100%;
+  top: 0;
+  background-color: #ece9e9;
 }
 
-.link-wrapper a {
-  padding: 10px;
-  font-size: large;
+.logo {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+
+.nav-links {
+  display: flex;
+  width: 40%;
+  justify-content: space-around;
+  vertical-align: middle;
+  margin: initial;
+}
+
+.nav-links li {
+  list-style: none;
+}
+.nav-links a {
+  color: #04c2c9;
+  text-decoration: none;
+  letter-spacing: 3px;
   font-weight: bold;
+  font-size: 14px;
+}
+.burger {
+  display: none;
+  cursor: pointer;
+}
+.burger div {
+  width: 20px;
+  height: 2px;
+  margin: 5px;
+  background-color: #04c2c9;
 }
 
-nav .link-wrapper > .active {
-  color: #04c2c9 !important;
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    z-index: -5;
+    padding: 0%;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    height: fit-content;
+    top: 8vh;
+    background-color: #ece9e9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .burger {
+    display: block;
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.nav-active {
+  transform: translateY(0%);
 }
 
 .home {
@@ -55,9 +105,10 @@ nav .link-wrapper > .active {
 }
 
 .about {
-  background-color: white;
-  padding: 60px 20px 20px;
-  position: relative;
+  background-color: #ece9e9;
+  padding: 60px 10px 20px;
+
+  border-bottom-style: outset;
 }
 
 .portfolio {
@@ -77,7 +128,6 @@ nav .link-wrapper > .active {
 
 #tsparticles {
   height: 100vh;
-  position: absolute;
   width: 100%;
 }
 
@@ -127,7 +177,6 @@ nav .link-wrapper > .active {
   clip-path: circle(50% at 50% 50%);
 }
 
-
 .title {
   text-align: center;
   margin-bottom: 100px;
@@ -135,7 +184,6 @@ nav .link-wrapper > .active {
   position: relative;
   font-weight: 600;
 }
-
 
 .skills {
   margin-top: 20px;
@@ -177,7 +225,6 @@ i.huge.icons {
   );
 }
 
-
 .ui.grid + .grid {
   margin-top: 6rem;
 }
@@ -192,13 +239,18 @@ i.huge.icons {
   font-size: 30pt;
 }
 
-.piechart{
+.piechart {
   width: 50%;
 }
 
+#pie-list {
+  width: fit-content;
+  margin: auto;
+  text-align: center;
+  border-style: double;
+}
 
-
-#pie-list ul{
+#pie-list ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -207,11 +259,12 @@ i.huge.icons {
 #pie-list li {
   line-height: 50px;
   height: 50px;
-  font-size: 13pt;
+  font-size: 12pt;
 }
 
 #profile {
-  margin: 80px 0px;
+  width: 85%;
+  margin: 80px auto 60px;
   padding: 20px 0px;
   border-top: outset;
   border-bottom: outset;
@@ -219,9 +272,7 @@ i.huge.icons {
   background-color: azure;
 }
 
-.blurb{
-  
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
+#special {
+  font-size: x-large;
+  font-family: cursive;
 }

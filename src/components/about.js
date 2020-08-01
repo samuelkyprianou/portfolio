@@ -99,49 +99,63 @@ export default class About extends Component {
           </Grid>
 
           <section id="profile">
-          <Grid   container  stackable columns="equal">
-            <Grid.Column floated="left" width={5}>
-              <ScrollAnimation
-                animateIn="fadeInLeft"
-                delay={500}
-                animateOnce={true}
-              >
-                <img src={profile} alt="profile-pic" className="profile"></img>
-              </ScrollAnimation>
-            </Grid.Column>
-            <Grid.Column floated="right" textAlign="center" width={11}>
-              <ScrollAnimation
-                animateIn="fadeInRight"
-                delay={750}
-                animateOnce={true}
-                className="animate-profile"
-              >
-                <div className="skills who">
-                  {" "}
-                  <p>Whos's This Guy?</p>
-                </div>
-                <div className="blurb">
+            <Grid container stackable columns="equal" >
+              <Grid.Column  width={5}>
+                <ScrollAnimation
+                  animateIn="fadeInLeft"
+                  delay={500}
+                  animateOnce={true}
+                >
+                  <img
+                    src={profile}
+                    alt="profile-pic"
+                    className="profile"
+                  ></img>
+                </ScrollAnimation>
+              </Grid.Column>
+              <Grid.Column floated="right" textAlign="center" width={11}>
+                <ScrollAnimation
+                  animateIn="fadeInRight"
+                  delay={750}
+                  animateOnce={true}
+                  className="animate-profile"
+                >
+                  
+                    
+                    <p className="skills who">Whos's This Guy?</p>
+                  
+                  
+                    <p id="blurb" className="blurb">
+                      I'm a recently qualified full stack software engineer
+                      living in London, UK. I have previous experience in luxury
+                      fashion retail and transitioned to coding to follow my
+                      passion and to help companies build intuitive,
+                      user-friendly applications and websites. Creative,
+                      result-driven, and detail-oriented with strong
+                      interpersonal skills. I have serious joy for UI effects,
+                      animations and creating dynamic user experiences. <br></br> <br></br>
+                          
+                          <span id="special">Let's
+                      make something special.
+                      </span>
+                    </p>
+                  
+                </ScrollAnimation>
+              </Grid.Column>
+            </Grid>
+          </section>
 
-                <p id="blurb">
-                  I'm a recently qualified full stack software engineer living
-                  in London, UK. I have previous experience in luxury fashion
-                  retail and transitioned to coding to follow my passion and to
-                  help companies build intuitive, user-friendly applications and
-                  websites. Creative, result-driven, and detail-oriented with
-                  strong interpersonal skills. I have serious joy for UI
-                  effects, animations and creating dynamic user experiences.
-                  Let's make something special.
-                </p>
-                </div>
-              </ScrollAnimation>
-            </Grid.Column>
-          </Grid>
-            </section>
-          
-          <Grid  centered verticalAlign='middle' columns="equal" textAlign="center">
+          <Grid
+            centered
+            verticalAlign="middle"
+            columns="equal"
+            textAlign="center"
+          >
             <Grid.Row only="computer">
               <Grid.Column>
-                <Segment color="teal" id="pie-list">
+                <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
+
+                <Segment  id="pie-list" inverted secondary>
                   <div className="skills">Part Designer</div>
                   <ul>
                     <li>UX design</li>
@@ -150,17 +164,30 @@ export default class About extends Component {
                     <li>Research</li>
                     <li>Making it 'pop'</li>
                   </ul>
-                </Segment>{" "}
+                </Segment>
+                </ScrollAnimation>
               </Grid.Column>
-              <Grid.Column width={8}>
+              <Grid.Column width={7}>
+              <ScrollAnimation animateIn="fadeIn" duration={2} delay={500} animateOnce={true}>
                 <Image src={piechart}></Image>
+                </ScrollAnimation>
               </Grid.Column>
               <Grid.Column>
-                <Segment>1</Segment>
+                <ScrollAnimation animateIn="fadeInRight" animateOnce={true}>
+                  <Segment color="teal" id="pie-list" inverted secondary>
+                    <div className="skills">Part Coder</div>
+                    <ul>
+                      <li>Full-stack development</li>
+                      <li>Programming paradigms</li>
+                      <li>HTML / CSS</li>
+                      <li>JavaScript</li>
+                      <li>Swearing at computers</li>
+                    </ul>
+                  </Segment>
+                </ScrollAnimation>
               </Grid.Column>
             </Grid.Row>
           </Grid>
-        
         </Container>
       </div>
     );
