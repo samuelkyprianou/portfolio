@@ -14,13 +14,13 @@ export default class Home extends Component {
           options={{
             background: {
               color: {
-                value: "#000000",
+                value: "#424242",
               },
               image: "",
               position: "50% 50%",
               repeat: "no-repeat",
               size: "cover",
-              opacity: 0.7,
+              opacity: 1,
             },
             backgroundMask: {
               cover: {
@@ -73,13 +73,13 @@ export default class Home extends Component {
                 bubble: {
                   distance: 400,
                   duration: 2,
-                  opacity: 0.8,
+                  opacity: 1,
                   size: 80,
                 },
                 connect: {
                   distance: 80,
                   links: {
-                    opacity: 0.5,
+                    opacity: 1,
                   },
                   radius: 100,
                 },
@@ -116,7 +116,7 @@ export default class Home extends Component {
                 mode: "bounce",
             },
             color: {
-                value: "#ff0000",
+                value: "#d0a794",
                 animation: {
                     enable: true,
                     speed: 20,
@@ -126,12 +126,12 @@ export default class Home extends Component {
             links: {
                 blink: false,
                 color: {
-                    value: "#04c2c9",
+                    value: "#7f7d7e",
                 },
                 consent: false,
                 distance: 100,
                 enable: true,
-                opacity: 0.4,
+                opacity: 1,
                 shadow: {
                     blur: 5,
                     color: {
@@ -192,7 +192,7 @@ export default class Home extends Component {
         opacity: {
                 animation: {
                   enable: false,
-                  minimumValue: 0.1,
+                  minimumValue: 0.5,
                   speed: 3,
                   sync: false,
                 },
@@ -200,7 +200,7 @@ export default class Home extends Component {
                     enable: false,
                     minimumValue: 1,
                 },
-                value: 0.5,
+                value: 1,
             },
             rotate: {
                 animation: {
@@ -284,7 +284,7 @@ export default class Home extends Component {
         <Container text id="home-title" textAlign="center">
         <ScrollAnimation animateIn="fadeInUp" delay={1000}>
           <div className="text">
-            <p>Hello, I'm <span className="highlight">Sam Kyprianou</span>.{" "}
+            <p>Hello, I'm <br></br><span className="highlight">Sam Kyprianou</span>.{" "}
             <br></br>I'm a full-stack web developer. </p>
           <Button inverted color='teal'>
         My Work

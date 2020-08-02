@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-scroll";
+import { Icon } from 'semantic-ui-react'
 
 export default class Navb extends Component {
   navSlide = () => {
@@ -22,7 +23,7 @@ export default class Navb extends Component {
       <nav className="nav">
         <div className="logo">
           {" "}
-          <h4>The Nav</h4>
+          <h4>Sam Kyp</h4>
         </div>
         <ul className="nav-links" id="nav-links">
           <li>
@@ -91,9 +92,7 @@ export default class Navb extends Component {
           </li>
         </ul>
         <div className="burger" id="burger" onClick={() => this.navSlide()}>
-          <div className="line1"></div>
-          <div className="line2"></div>
-          <div className="line3"></div>
+        <Icon circular inverted color='teal' name='th list' />
         </div>
       </nav>
     );

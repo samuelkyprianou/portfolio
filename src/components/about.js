@@ -9,7 +9,7 @@ export default class About extends Component {
     return (
       <div className="about">
         <Container fluid>
-          <div className="title">
+          <div className="title marker">
             <p>About</p>
           </div>
           <Grid centered>
@@ -24,7 +24,7 @@ export default class About extends Component {
                 </div>
               </ScrollAnimation>
               <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
-                <div className="skills">Fast</div>
+                <div className="skills marker">Fast</div>
                 <p>
                   Fast load times and lag free interaction, my highest priority.
                 </p>
@@ -47,7 +47,7 @@ export default class About extends Component {
                 delay={500}
                 animateOnce={true}
               >
-                <div className="skills">Responsive</div>
+                <div className="skills marker">Responsive</div>
                 <p>My layouts will work on any device, big or small.</p>
               </ScrollAnimation>
             </Grid.Column>
@@ -68,7 +68,7 @@ export default class About extends Component {
                 delay={1000}
                 animateOnce={true}
               >
-                <div className="skills">Intuitive</div>
+                <div className="skills marker">Intuitive</div>
                 <p>Strong preference for easy to use, intuitive UX/UI.</p>
               </ScrollAnimation>
             </Grid.Column>
@@ -89,7 +89,7 @@ export default class About extends Component {
                 delay={1500}
                 animateOnce={true}
               >
-                <div className="skills">Dynamic</div>
+                <div className="skills marker">Dynamic</div>
                 <p>
                   Websites don't have to be static, I love making pages come to
                   life.
@@ -122,7 +122,7 @@ export default class About extends Component {
                 >
                   
                     
-                    <p className="skills who">Whos's This Guy?</p>
+                    <p className="skills who marker">Whos's This Guy?</p>
                   
                   
                     <p id="blurb" className="blurb">
