@@ -1,5 +1,5 @@
 body {
-  font-family: "Permanent Marker", cursive;
+  font-family: 'Average Sans', sans-serif;
 }
 
 .nav {
@@ -15,12 +15,12 @@ body {
 }
 
 .logo {
-  font-family: "Permanent Marker", cursive;
+
   letter-spacing: 5px;
 }
 
 .logo h4 {
-  font-family: "Permanent Marker", cursive;
+ 
   color: #7f7d7e;
   font-size: 30px;
   -webkit-text-stroke-width: 1px;
@@ -159,8 +159,8 @@ i.inverted.circular.teal.icon  {
 
 .text p {
   text-align: center;
-  font-size: 32pt;
-  font-family: "Permanent Marker", cursive;
+  font-size: 39pt;
+  font-family: 'Average Sans', sans-serif;
   color: white;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
@@ -169,7 +169,7 @@ i.inverted.circular.teal.icon  {
 .highlight {
   font-weight: bold;
   -webkit-text-stroke-width: 0.1px;
-  font-size: 40pt;
+  font-size: 50pt;
   color: #d4845c;
   -webkit-text-stroke-color: black;
 }
@@ -313,7 +313,7 @@ i.huge.icons {
 }
 
 .marker{
-  font-family: "Permanent Marker", cursive;
+  font-family: 'Average Sans', sans-serif;
   color: #7f7d7e;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;

@@ -167,7 +167,7 @@ export default class About extends Component {
                 </Segment>
                 </ScrollAnimation>
               </Grid.Column>
-              <Grid.Column width={7}>
+              <Grid.Column width={6}>
               <ScrollAnimation animateIn="fadeIn" duration={2} delay={500} animateOnce={true}>
                 <Image src={piechart}></Image>
                 </ScrollAnimation>
