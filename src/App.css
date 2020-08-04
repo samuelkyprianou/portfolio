@@ -126,8 +126,10 @@ i.inverted.circular.teal.icon  {
 }
 
 .portfolio {
-  height: 100vh;
-  background-color: #ece9e9;
+  background-color: #e6e8e5;
+  padding: 60px 10px 20px;
+
+  border-bottom-style: outset;
 }
 
 .blog {
@@ -273,7 +275,7 @@ i.huge.icons {
 }
 
 #pie-list {
-  width: fit-content;
+  width: 90%;
   margin: auto;
   text-align: center;
   border-style: groove;
