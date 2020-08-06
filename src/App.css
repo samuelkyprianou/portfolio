@@ -194,8 +194,6 @@ i.inverted.circular.teal.icon  {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: black;
-    border-style: dotted;
 }
 .animated-circle {
   clip-path: circle(0% at 50% 50%);
