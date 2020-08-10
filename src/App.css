@@ -220,6 +220,9 @@ i.inverted.circular.teal.icon  {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
 }
+.skills.who {
+  margin-bottom: 0px;
+}
 
 .huge.icon,
 i.huge.icons {
@@ -298,7 +301,7 @@ i.huge.icons {
 #profile {
   width: 100%;
   margin: 80px auto 60px;
-  padding: 20px 0px;
+  padding: 20px 20px;
   border-top: outset;
   border-bottom: outset;
   border-color: #00000021;
@@ -319,4 +322,18 @@ i.huge.icons {
 
 .skills.marker{
   letter-spacing: 3px;
+}
+
+.profile-pic{
+  justify-content: center !important;
+  align-items: center !important;
+  display: flex !important;
+}
+
+.animate-profile {
+  animation-duration: 1s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }

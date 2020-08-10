@@ -99,8 +99,8 @@ export default class About extends Component {
           </Grid>
 
           <section id="profile">
-            <Grid container stackable columns="equal" >
-              <Grid.Column  width={5}>
+            <Grid  stackable columns="equal" >
+              <Grid.Column  width={5} className="profile-pic">
                 <ScrollAnimation
                   animateIn="fadeInLeft"
                   delay={500}
@@ -113,7 +113,8 @@ export default class About extends Component {
                   ></img>
                 </ScrollAnimation>
               </Grid.Column>
-              <Grid.Column floated="right" textAlign="center" width={11}>
+              <Grid.Column floated="right" textAlign="center" >
+                
                 <ScrollAnimation
                   animateIn="fadeInRight"
                   delay={750}
@@ -121,7 +122,6 @@ export default class About extends Component {
                   className="animate-profile"
                 >
                   
-                    
                     <p className="skills who marker">Whos's This Guy?</p>
                   
                   
@@ -134,14 +134,18 @@ export default class About extends Component {
                       result-driven, and detail-oriented with strong
                       interpersonal skills. I have serious joy for UI effects,
                       animations and creating dynamic user experiences. <br></br> <br></br>
-                          
-                          <span id="special">Let's
-                      make something special.
-                      </span>
                     </p>
+                          
+                          <p id="special">Let's
+                      make something special.
+                      </p>
                   
                 </ScrollAnimation>
+                    
               </Grid.Column>
+              <Grid.Column floated="right" textAlign="center" >
+
+                </Grid.Column>
             </Grid>
           </section>
 
