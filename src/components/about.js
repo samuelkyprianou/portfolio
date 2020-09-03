@@ -5,7 +5,43 @@ import piechart from "../images/piechart.png";
 import ScrollAnimation from "react-animate-on-scroll";
 
 export default class About extends Component {
+  state = { animate: false };
+
   render() {
+    const handleAnimate = () => this.setState({ animate: true });
+
+    const style = {
+      css: this.state.animate
+      ? { width: "90%" }
+      : { width: "0%"},
+      html: this.state.animate
+      ? { width: "90%" }
+      : { width: "0%"},
+      react: this.state.animate
+        ? { width: "80%" }
+        : { width: "0%"},
+      jS: this.state.animate
+        ? { width: "80%" }
+        : { width: "0%"},
+      nodeJS: this.state.animate
+        ? { width: "65%" }
+        : { width: "0%"},
+      rubyRails: this.state.animate
+        ? { width: "70%" }
+        : { width: "0%"},
+      uiDesign: this.state.animate
+        ? { width: "60%" }
+        : { width: "0%"},
+      photoshop: this.state.animate
+        ? { width: "75%" }
+        : { width: "0%"},
+      typeScript: this.state.animate
+        ? { width: "70%" }
+        : { width: "0%"},
+      SQL: this.state.animate
+        ? { width: "80%" }
+        : { width: "0%"},
+    };
     return (
       <div className="about">
         <Container fluid>
@@ -99,8 +135,8 @@ export default class About extends Component {
           </Grid>
 
           <section id="profile">
-            <Grid  stackable columns="equal" >
-              <Grid.Column  width={5} className="profile-pic">
+            <Grid stackable columns="equal">
+              <Grid.Column className="profile-pic" >
                 <ScrollAnimation
                   animateIn="fadeInLeft"
                   delay={500}
@@ -113,39 +149,103 @@ export default class About extends Component {
                   ></img>
                 </ScrollAnimation>
               </Grid.Column>
-              <Grid.Column floated="right" textAlign="center" >
-                
+              <Grid.Column floated="right" textAlign="center">
                 <ScrollAnimation
                   animateIn="fadeInRight"
                   delay={750}
                   animateOnce={true}
                   className="animate-profile"
                 >
-                  
-                    <p className="skills who marker">Whos's This Guy?</p>
-                  
-                  
-                    <p id="blurb" className="blurb">
-                      I'm a recently qualified full stack software engineer
-                      living in London, UK. I have previous experience in luxury
-                      fashion retail and transitioned to coding to follow my
-                      passion and to help companies build intuitive,
-                      user-friendly applications and websites. Creative,
-                      result-driven, and detail-oriented with strong
-                      interpersonal skills. I have serious joy for UI effects,
-                      animations and creating dynamic user experiences. <br></br> <br></br>
-                    </p>
-                          
-                          <p id="special">Let's
-                      make something special.
-                      </p>
-                  
+                  <p className="skills who marker">Whos's This Guy?</p>
+
+                  <p id="blurb" className="blurb">
+                    I'm a recently qualified full stack software engineer living
+                    in London, UK. I have previous experience in luxury fashion
+                    retail and transitioned to coding to follow my passion and
+                    to help companies build intuitive, user-friendly
+                    applications and websites. Creative, result-driven, and
+                    detail-oriented with strong interpersonal skills. I have
+                    serious joy for UI effects, animations and creating dynamic
+                    user experiences. <br></br> <br></br>
+                  </p>
+
+                  <p id="special">Let's make something special.</p>
                 </ScrollAnimation>
-                    
               </Grid.Column>
               <Grid.Column floated="right" textAlign="center" >
+                <ScrollAnimation
+                  animateIn="fadeInRight"
+                  delay={750}
+                  animateOnce={true}
+                  className="animate-profile"
+                  afterAnimatedIn={() => {
+                    console.log("hi");
+                    handleAnimate();
+                  }}
+                >
+                  <div className="bar flex">
+                    <div className="bar fill" style={style.css}>
+                      <div class="tag bold flex">CSS</div>
+                    </div>
+                    <span id="percent">90%</span>
+                  </div>
 
-                </Grid.Column>
+                  <div className="bar flex">
+                    <div className="bar fill" style={style.html}>
+                      <div class="tag bold flex">HTML</div>
+                    </div>
+                    <span id="percent">90%</span>
+                  </div>
+                  <div className="bar flex">
+                    <div className="bar fill" style={style.react}>
+                      <div class="tag bold flex">React</div>
+                    </div>
+                    <span id="percent">80%</span>
+                  </div>
+                  <div className="bar flex">
+                    <div className="bar fill" style={style.jS}>
+                      <div class="tag bold flex">Javascript</div>
+                    </div>
+                    <span id="percent">80%</span>
+                  </div>
+                  <div className="bar flex">
+                    <div className="bar fill" style={style.nodeJS}>
+                      <div class="tag bold flex">NodeJS</div>
+                    </div>
+                    <span id="percent">65%</span>
+                  </div>
+                  <div className="bar flex">
+                    <div className="bar fill" style={style.rubyRails}>
+                      <div class="tag bold flex">Ruby/Rails</div>
+                    </div>
+                    <span id="percent">70%</span>
+                  </div>
+                  <div className="bar flex">
+                    <div className="bar fill" style={style.uiDesign}>
+                      <div class="tag bold flex">UI Design</div>
+                    </div>
+                    <span id="percent">60%</span>
+                  </div>
+                  <div className="bar flex">
+                    <div className="bar fill" style={style.photoshop}>
+                      <div class="tag bold flex">Photoshop</div>
+                    </div>
+                    <span id="percent">75%</span>
+                  </div>
+                  <div className="bar flex">
+                    <div className="bar fill" style={style.typeScript}>
+                      <div class="tag bold flex">Typescript</div>
+                    </div>
+                    <span id="percent">70%</span>
+                  </div>
+                  <div className="bar flex">
+                    <div className="bar fill" style={style.SQL}>
+                      <div class="tag bold flex">SQL</div>
+                    </div>
+                    <span id="percent">80%</span>
+                  </div>
+                </ScrollAnimation>
+              </Grid.Column>
             </Grid>
           </section>
 
@@ -158,22 +258,26 @@ export default class About extends Component {
             <Grid.Row only="computer">
               <Grid.Column>
                 <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
-
-                <Segment  id="pie-list" inverted secondary>
-                  <div className="skills">Part Designer</div>
-                  <ul>
-                    <li>UX design</li>
-                    <li>UI design</li>
-                    <li>Interaction design</li>
-                    <li>Research</li>
-                    <li>Making it 'pop'</li>
-                  </ul>
-                </Segment>
+                  <Segment id="pie-list" inverted secondary>
+                    <div className="skills">Part Designer</div>
+                    <ul>
+                      <li>UX design</li>
+                      <li>UI design</li>
+                      <li>Interaction design</li>
+                      <li>Research</li>
+                      <li>Making it 'pop'</li>
+                    </ul>
+                  </Segment>
                 </ScrollAnimation>
               </Grid.Column>
               <Grid.Column width={6}>
-              <ScrollAnimation animateIn="fadeIn" duration={2} delay={500} animateOnce={true}>
-                <Image src={piechart}></Image>
+                <ScrollAnimation
+                  animateIn="fadeIn"
+                  duration={2}
+                  delay={500}
+                  animateOnce={true}
+                >
+                  <Image src={piechart}></Image>
                 </ScrollAnimation>
               </Grid.Column>
               <Grid.Column>
