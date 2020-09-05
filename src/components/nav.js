@@ -35,7 +35,7 @@ export default class Navb extends Component {
               offset={0}
               duration={500}
             >
-              home
+              Home
             </Link>
           </li>
           <li>

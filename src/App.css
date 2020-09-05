@@ -84,6 +84,16 @@ i.inverted.circular.teal.icon {
   }
   .nav-links li {
     opacity: 0;
+    opacity: 0;
+    width: 100%;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-top: solid black 1px;
+  }
+  .nav-links li a {
+    width: 100%;
   }
   .burger {
     display: flex;
@@ -102,6 +112,9 @@ i.inverted.circular.teal.icon {
   }
   #percent {
     display: none
+  }
+  #home-title {
+    top: 30%;
   }
 }
 
@@ -232,6 +245,7 @@ i.huge.icons {
 
 .profile {
   width: 100%;
+  padding: 20px;
   clip-path: polygon(
     30% 0%,
     70% 0%,
@@ -377,8 +391,27 @@ i.huge.icons {
 }
 
 .bar span {
-  padding: 0 10px 0 0;
+  padding: 0 5px 0 0;
   z-index: 1;
   font-size: 12px;
   font-weight: bold;
 }
+
+.graph{
+  padding: 20px;
+}
+
+.aws-btn{
+  --button-default-height: 47px !important;
+  --button-default-font-size: 14px !important;
+  --button-default-border-radius: 6px !important;
+  --button-horizontal-padding: 20px !important;
+  --button-raise-level: 5px !important;
+  --button-hover-pressure: 2 !important;
+  --transform-speed: 0.185s !important;
+  --button-primary-color: transparent !important;
+  --button-primary-color-dark: #191919 !important;
+  --button-primary-color-light: #ffffff !important;
+  --button-primary-color-hover: #d4835c !important;
+  --button-primary-border: 1px solid #d4835c !important;
+  }

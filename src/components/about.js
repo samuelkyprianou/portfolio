@@ -135,8 +135,8 @@ export default class About extends Component {
           </Grid>
 
           <section id="profile">
-            <Grid stackable columns="equal">
-              <Grid.Column className="profile-pic" >
+            <Grid  centered>
+              <Grid.Column mobile={16} tablet={25} computer={5} className="profile-pic" >
                 <ScrollAnimation
                   animateIn="fadeInLeft"
                   delay={500}
@@ -149,9 +149,9 @@ export default class About extends Component {
                   ></img>
                 </ScrollAnimation>
               </Grid.Column>
-              <Grid.Column floated="right" textAlign="center">
+              <Grid.Column mobile={16} tablet={16} computer={5} textAlign="center">
                 <ScrollAnimation
-                  animateIn="fadeInRight"
+                  animateIn="fadeIn"
                   delay={750}
                   animateOnce={true}
                   className="animate-profile"
@@ -172,14 +172,13 @@ export default class About extends Component {
                   <p id="special">Let's make something special.</p>
                 </ScrollAnimation>
               </Grid.Column>
-              <Grid.Column floated="right" textAlign="center" >
+              <Grid.Column mobile={16} tablet={16} computer={5}  textAlign="center" >
                 <ScrollAnimation
                   animateIn="fadeInRight"
-                  delay={750}
+                  delay={500}
                   animateOnce={true}
-                  className="animate-profile"
+                  className="animate-profile graph"
                   afterAnimatedIn={() => {
-                    console.log("hi");
                     handleAnimate();
                   }}
                 >
