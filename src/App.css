@@ -142,7 +142,7 @@ i.inverted.circular.teal.icon {
 }
 
 .about {
-  background-color: #e6e8e5;
+  background-color: #fafafa;
   padding: 60px 10px 20px;
 
   border-bottom-style: outset;
@@ -226,15 +226,12 @@ i.inverted.circular.teal.icon {
 
 .skills {
   margin-top: 20px;
-  font-size: x-large;
+  font-size: 32px;
   font-weight: 800;
   margin-bottom: 15px;
   font-family: "Average Sans", sans-serif;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
-}
-.skills.who {
-  margin-bottom: 0px;
 }
 
 .huge.icon,
@@ -277,12 +274,17 @@ i.huge.icons {
 
 #blurb {
   font-size: 13pt;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(20, 20, 20, 0.5);
 }
 
 .skills.who {
   margin-top: 0;
   margin-bottom: 30px;
   font-size: 30pt;
+  letter-spacing: 3px !important;
+
 }
 
 .piechart {
@@ -334,7 +336,7 @@ i.huge.icons {
 }
 
 .skills.marker {
-  letter-spacing: 3px;
+  letter-spacing: 5px;
 }
 
 .profile-pic {
@@ -414,4 +416,12 @@ i.huge.icons {
   --button-primary-color-light: #ffffff !important;
   --button-primary-color-hover: #d4835c !important;
   --button-primary-border: 1px solid #d4835c !important;
+  }
+
+  #skills-blurb {
+    width: 90%;
+    margin: auto;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(20, 20, 20, 0.5)
   }

@@ -61,7 +61,7 @@ export default class About extends Component {
               </ScrollAnimation>
               <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
                 <div className="skills marker">Fast</div>
-                <p>
+                <p id="skills-blurb">
                   Fast load times and lag free interaction, my highest priority.
                 </p>
               </ScrollAnimation>
@@ -84,7 +84,7 @@ export default class About extends Component {
                 animateOnce={true}
               >
                 <div className="skills marker">Responsive</div>
-                <p>My layouts will work on any device, big or small.</p>
+                <p id="skills-blurb">My layouts will work on any device, big or small.</p>
               </ScrollAnimation>
             </Grid.Column>
 
@@ -105,7 +105,7 @@ export default class About extends Component {
                 animateOnce={true}
               >
                 <div className="skills marker">Intuitive</div>
-                <p>Strong preference for easy to use, intuitive UX/UI.</p>
+                <p id="skills-blurb">Strong preference for easy to use, intuitive UX/UI.</p>
               </ScrollAnimation>
             </Grid.Column>
 
@@ -126,7 +126,7 @@ export default class About extends Component {
                 animateOnce={true}
               >
                 <div className="skills marker">Dynamic</div>
-                <p>
+                <p id="skills-blurb">
                   Websites don't have to be static, I love making pages come to
                   life.
                 </p>
@@ -156,9 +156,9 @@ export default class About extends Component {
                   animateOnce={true}
                   className="animate-profile"
                 >
-                  <p className="skills who marker">Whos's This Guy?</p>
+                  <p className="skills who marker">Who's This Guy?</p>
 
-                  <p id="blurb" className="blurb">
+                  <p id="blurb" >
                     I'm a recently qualified full stack software engineer living
                     in London, UK. I have previous experience in luxury fashion
                     retail and transitioned to coding to follow my passion and
