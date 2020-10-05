@@ -1,32 +1,42 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import { Link } from "react-scroll";
-import { Icon } from 'semantic-ui-react'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default class Navb extends Component {
-  navSlide = () => {
-    const nav = document.getElementById("nav-links");
+state = {activeNavBar: false }
+
+navSlide = () => {
+  const nav = document.getElementById("nav-links");
     const navLinks = document.querySelectorAll(".nav-links li");
     nav.classList.toggle("nav-active");
     navLinks.forEach((link, index) => {
-      if (link.style.animation) {
-        link.style.animation = "";
+      if (link.style.animation.includes("navLinkFade")) {
+        link.style.animation = ""
       } else {
-        link.style.animation = `navLinkFade 0.5s ease forwards ${
+        link.style.animation = `navLinkFade 0.3s ease forwards ${
           index / 8 + 0.5
         }s`;
       }
     });
   };
 
+  handleClose = () => {
+    const nav = document.getElementById("nav-links");
+    if (nav.classList.value === "nav-links nav-active"){
+      this.navSlide()
+    }
+  } 
+
   render() {
     return (
       <nav className="nav">
         <div className="logo">
           {" "}
-          <h4>Sam Kyp</h4>
+          <h4>SK</h4>
         </div>
         <ul className="nav-links" id="nav-links">
-          <li>
+          <li >
             <Link
               activeClass="active"
               to="home"
@@ -34,6 +44,7 @@ export default class Navb extends Component {
               smooth={true}
               offset={0}
               duration={500}
+              onClick={() => this.handleClose()}
             >
               Home
             </Link>
@@ -46,6 +57,7 @@ export default class Navb extends Component {
               smooth={true}
               offset={0}
               duration={500}
+              onClick={() => this.handleClose()}
             >
               {" "}
               About{" "}
@@ -59,6 +71,7 @@ export default class Navb extends Component {
               smooth={true}
               offset={0}
               duration={500}
+              onClick={() => this.handleClose()}
             >
               {" "}
               Portfolio{" "}
@@ -72,6 +85,7 @@ export default class Navb extends Component {
               smooth={true}
               offset={0}
               duration={500}
+              onClick={() => this.handleClose()}
             >
               {" "}
               Blog{" "}
@@ -85,6 +99,7 @@ export default class Navb extends Component {
               smooth={true}
               offset={0}
               duration={500}
+              onClick={() => this.handleClose()}
             >
               {" "}
               Contact{" "}
@@ -92,7 +107,7 @@ export default class Navb extends Component {
           </li>
         </ul>
         <div className="burger" id="burger" onClick={() => this.navSlide()}>
-        <Icon circular inverted color='teal' name='th list' />
+        <FontAwesomeIcon icon={faBars} style={{color: "aqua", alignSelf: "center", margin: "auto", fontSize: "20px" }}/>
         </div>
       </nav>
     );

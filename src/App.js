@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import Navb from "./components/nav"
-import Home from "./components/home";
-import About from "./components/about";
-import Portfolio from "./components/portfolio";
-import Blog from "./components/blog";
-import Contact from "./components/contact";
+import Navb from "./screens/nav"
+import Home from "./screens/home";
+import About from "./screens/about";
+import Portfolio from "./screens/portfolio";
+import Blog from "./screens/blog";
+import Contact from "./screens/contact";
 
 
 function App() {
