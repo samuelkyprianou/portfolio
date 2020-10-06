@@ -9,8 +9,8 @@ export default class Home extends Component {
   render() {
     return (
       <div name="home" className="home">
-        <div class="stars">
-        <div class="twinkling"></div>
+        <div className="stars">
+        <div className="twinkling"></div>
         </div>
         <Container text id="home-title" textAlign="center">
           <ScrollAnimation animateIn="fadeInUp" delay={1000}>

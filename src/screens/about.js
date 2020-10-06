@@ -1,10 +1,12 @@
 import React, { Component } from "react";
-import { Grid, Container, Icon, Segment, Image } from "semantic-ui-react";
-import profile from "../images/profile.jpeg";
+import { Grid, Container } from "semantic-ui-react";
+import profile from "../images/profile.webp";
+import profileJpg from "../images/profile.jpeg";
 import ScrollAnimation from "react-animate-on-scroll";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMobileAlt, faHeartbeat } from '@fortawesome/free-solid-svg-icons'
-import { faClock, faLightbulb } from '@fortawesome/free-regular-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMobileAlt, faHeartbeat } from "@fortawesome/free-solid-svg-icons";
+import { faClock, faLightbulb } from "@fortawesome/free-regular-svg-icons";
+
 
 export default class About extends Component {
   state = { animate: false };
@@ -24,27 +26,45 @@ export default class About extends Component {
       typeScript: this.state.animate ? { width: "70%" } : { width: "0%" },
       SQL: this.state.animate ? { width: "80%" } : { width: "0%" },
     };
+
+    const ImgWithFallback = ({
+      src,
+      fallback,
+      type = 'image/webp',
+      alt,
+      ...delegated
+    }) => {
+      return (
+        <picture>
+          <source srcSet={src} type={type} />
+          <img src={fallback} alt={alt} {...delegated} />
+        </picture>
+      );
+    };
+
     return (
       <div className="about">
-        <Container fluid className="about-container" >
+        <Container fluid className="about-container">
           <div className="title">
             <h1>About</h1>
           </div>
           <Grid centered>
             <Grid.Column textAlign="center" mobile={16} tablet={8} computer={4}>
-            <div className="hexagon-wrapper">
-              <div className="hexagon">
-
-              <ScrollAnimation
-                className="animated-circle"
-                animateIn="expand"
-                animateOnce={true}
-              >
-                <div className="circle">
-                <FontAwesomeIcon icon={faClock} style={{color: "#ebeded", fontSize: 90}}/>
+              <div className="hexagon-wrapper">
+                <div className="hexagon">
+                  <ScrollAnimation
+                    className="animated-circle"
+                    animateIn="expand"
+                    animateOnce={true}
+                  >
+                    <div className="circle">
+                      <FontAwesomeIcon
+                        icon={faClock}
+                        style={{ color: "#ebeded", fontSize: 90 }}
+                      />
+                    </div>
+                  </ScrollAnimation>
                 </div>
-              </ScrollAnimation>
-              </div>
               </div>
               <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
                 <div className="skills marker">Fast</div>
@@ -55,20 +75,23 @@ export default class About extends Component {
             </Grid.Column>
 
             <Grid.Column textAlign="center" mobile={16} tablet={8} computer={4}>
-            <div className="hexagon-wrapper">
-            <div className="hexagon">
-              <ScrollAnimation
-                animateIn="expand"
-                delay={500}
-                className="animated-circle"
-                animateOnce={true}
-              >
-                <div className="circle">
-                <FontAwesomeIcon icon={faMobileAlt} style={{color: "#ebeded", fontSize: 90}}/>
+              <div className="hexagon-wrapper">
+                <div className="hexagon">
+                  <ScrollAnimation
+                    animateIn="expand"
+                    delay={500}
+                    className="animated-circle"
+                    animateOnce={true}
+                  >
+                    <div className="circle">
+                      <FontAwesomeIcon
+                        icon={faMobileAlt}
+                        style={{ color: "#ebeded", fontSize: 90 }}
+                      />
+                    </div>
+                  </ScrollAnimation>
                 </div>
-              </ScrollAnimation>
-                </div>
-                </div>
+              </div>
               <ScrollAnimation
                 animateIn="fadeInUp"
                 delay={500}
@@ -82,19 +105,22 @@ export default class About extends Component {
             </Grid.Column>
 
             <Grid.Column textAlign="center" mobile={16} tablet={8} computer={4}>
-            <div className="hexagon-wrapper">
-            <div className="hexagon">
-              <ScrollAnimation
-                animateIn="expand"
-                animateOnce={true}
-                delay={1000}
-                className="animated-circle"
-              >
-                <div className="circle">
-                <FontAwesomeIcon icon={faLightbulb} style={{color: "#ebeded", fontSize: 90}}/>
+              <div className="hexagon-wrapper">
+                <div className="hexagon">
+                  <ScrollAnimation
+                    animateIn="expand"
+                    animateOnce={true}
+                    delay={1000}
+                    className="animated-circle"
+                  >
+                    <div className="circle">
+                      <FontAwesomeIcon
+                        icon={faLightbulb}
+                        style={{ color: "#ebeded", fontSize: 90 }}
+                      />
+                    </div>
+                  </ScrollAnimation>
                 </div>
-              </ScrollAnimation>
-              </div>
               </div>
               <ScrollAnimation
                 animateIn="fadeInUp"
@@ -109,20 +135,22 @@ export default class About extends Component {
             </Grid.Column>
 
             <Grid.Column textAlign="center" mobile={16} tablet={8} computer={4}>
-            <div className="hexagon-wrapper">
-            <div className="hexagon">
-              <ScrollAnimation
-                animateIn="expand"
-                animateOnce={true}
-                delay={1500}
-                className="animated-circle"
-              >
-                <div className="circle">
-                <FontAwesomeIcon icon={faHeartbeat} style={{color: "#ebeded", fontSize: 90}}/>
+              <div className="hexagon-wrapper">
+                <div className="hexagon">
+                  <ScrollAnimation
+                    animateIn="expand"
+                    animateOnce={true}
+                    delay={1500}
+                    className="animated-circle"
+                  >
+                    <div className="circle">
+                      <FontAwesomeIcon
+                        icon={faHeartbeat}
+                        style={{ color: "#ebeded", fontSize: 90 }}
+                      />
+                    </div>
+                  </ScrollAnimation>
                 </div>
-              
-              </ScrollAnimation>
-              </div>
               </div>
               <ScrollAnimation
                 animateIn="fadeInUp"
@@ -139,31 +167,26 @@ export default class About extends Component {
           </Grid>
 
           <section id="profile">
-            <Grid columns={2} centered style={{padding: "inherit"}}>
-              <Grid.Column 
-                className="profile-pic"
-                 tablet={15} computer={6}
-              >
+            <Grid columns={2} centered style={{ padding: "inherit" }}>
+              <Grid.Column className="profile-pic" tablet={15} computer={6}>
                 <div className="profile-pic-border">
-                <div className="profile-wrappper">
-                <ScrollAnimation
-                  animateIn="fadeIn"
-                  delay={900}
-                  animateOnce={true}
-                >
-                  <img
-                    src={profile}
-                    alt="profile-pic"
-                    className="profile"
-                  ></img>
-                </ScrollAnimation>
-                </div>
+                  <div className="profile-wrappper">
+                    <ScrollAnimation
+                      animateIn="fadeIn"
+                      delay={900}
+                      animateOnce={true}
+                    >
+                      <ImgWithFallback 
+                      className="profile"
+                      src={profile}
+                      fallback={profileJpg}
+                      alt="Profile Picture"
+                      />
+                    </ScrollAnimation>
+                  </div>
                 </div>
               </Grid.Column>
-              <Grid.Column 
-             tablet={15} computer={9 }
-             textAlign="center"
-              >
+              <Grid.Column tablet={15} computer={9} textAlign="center">
                 <ScrollAnimation
                   animateIn="fadeInRight"
                   delay={500}
@@ -180,7 +203,7 @@ export default class About extends Component {
                     applications and websites. Creative, result-driven, and
                     detail-oriented with strong interpersonal skills. I have
                     serious joy for UI effects, animations and creating dynamic
-                    user experiences. 
+                    user experiences.
                   </p>
 
                   <p id="special">Let's make something special.</p>
@@ -197,64 +220,54 @@ export default class About extends Component {
               }}
             >
               <div className="bar flex">
-                <div className="bar fill" style={style.css}>
-                </div>
-                  <div class="tag bold flex">CSS</div>
+                <div className="bar fill" style={style.css}></div>
+                <div className="tag bold flex">CSS</div>
                 <span id="percent">90%</span>
               </div>
 
               <div className="bar flex">
-                <div className="bar fill" style={style.html}>
-                </div>
-                  <div class="tag bold flex">HTML</div>
+                <div className="bar fill" style={style.html}></div>
+                <div className="tag bold flex">HTML</div>
                 <span id="percent">90%</span>
               </div>
               <div className="bar flex">
-                <div className="bar fill" style={style.react}>
-                </div>
-                  <div class="tag bold flex">React/Native</div>
+                <div className="bar fill" style={style.react}></div>
+                <div className="tag bold flex">React/Native</div>
                 <span id="percent">80%</span>
               </div>
               <div className="bar flex">
-                <div className="bar fill" style={style.jS}>
-                </div>
-                  <div class="tag bold flex">Javascript</div>
+                <div className="bar fill" style={style.jS}></div>
+                <div className="tag bold flex">Javascript</div>
                 <span id="percent">80%</span>
               </div>
               <div className="bar flex">
-                <div className="bar fill" style={style.nodeJS}>
-                </div>
-                  <div class="tag bold flex">NodeJS</div>
+                <div className="bar fill" style={style.nodeJS}></div>
+                <div className="tag bold flex">NodeJS</div>
                 <span id="percent">65%</span>
               </div>
               <div className="bar flex">
-                <div className="bar fill" style={style.rubyRails}>
-                </div>
-                  <div class="tag bold flex">Ruby/Rails</div>
+                <div className="bar fill" style={style.rubyRails}></div>
+                <div className="tag bold flex">Ruby/Rails</div>
                 <span id="percent">70%</span>
               </div>
               <div className="bar flex">
-                <div className="bar fill" style={style.uiDesign}>
-                </div>
-                  <div class="tag bold flex">UI Design</div>
+                <div className="bar fill" style={style.uiDesign}></div>
+                <div className="tag bold flex">UI Design</div>
                 <span id="percent">60%</span>
               </div>
               <div className="bar flex">
-                <div className="bar fill" style={style.photoshop}>
-                </div>
-                  <div class="tag bold flex">Photoshop</div>
+                <div className="bar fill" style={style.photoshop}></div>
+                <div className="tag bold flex">Photoshop</div>
                 <span id="percent">75%</span>
               </div>
               <div className="bar flex">
-                <div className="bar fill" style={style.typeScript}>
-                </div>
-                  <div class="tag bold flex">Typescript</div>
+                <div className="bar fill" style={style.typeScript}></div>
+                <div className="tag bold flex">Typescript</div>
                 <span id="percent">70%</span>
               </div>
               <div className="bar flex">
-                <div className="bar fill" style={style.SQL}>
-                </div>
-                  <div class="tag bold flex">SQL</div>
+                <div className="bar fill" style={style.SQL}></div>
+                <div className="tag bold flex">SQL</div>
                 <span id="percent">80%</span>
               </div>
             </ScrollAnimation>
