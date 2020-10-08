@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { Container } from "semantic-ui-react";
 import ScrollAnimation from "react-animate-on-scroll";
 import { AwesomeButton } from "react-awesome-button";
 import { Link } from "react-scroll";
 import "react-awesome-button/dist/styles.css";
+
 
 export default class Home extends Component {
   render() {
@@ -12,9 +12,8 @@ export default class Home extends Component {
         <div className="stars">
         <div className="twinkling"></div>
         </div>
-        <Container text id="home-title" textAlign="center">
+        <div text id="home-title" textAlign="center">
           <ScrollAnimation animateIn="fadeInUp" delay={1000}>
-            <div className="text">
               <p>
                 Hello, I'm <br></br>
                 <span className="highlight">Sam Kyprianou</span>. <br></br>I'm a
@@ -32,9 +31,8 @@ export default class Home extends Component {
                   My Work{" "}
                 </AwesomeButton>
               </Link>
-            </div>
           </ScrollAnimation>
-        </Container>
+        </div>
       </div>
     );
   }

@@ -1,36 +1,55 @@
 import React, { Component } from "react";
-import { Grid, Container } from "semantic-ui-react";
+import { Grid } from "semantic-ui-react";
 import profile from "../images/profile.webp";
 import profileJpg from "../images/profile.jpeg";
 import ScrollAnimation from "react-animate-on-scroll";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMobileAlt, faHeartbeat } from "@fortawesome/free-solid-svg-icons";
 import { faClock, faLightbulb } from "@fortawesome/free-regular-svg-icons";
+import SkillCircle from "../components/SkillCircle";
+import SkillBlurb from "../components/SkillBlurb";
+import Bar from "../components/Bar";
 
+import "../StyleSheets/Grid.css"
 
 export default class About extends Component {
   state = { animate: false };
 
+  handleAnimate = () => this.setState({ animate: true });
+
+  barChart = () => {
+    const barStyles = [
+      { CSS: { width: "90%" } },
+      { HTML: { width: "90%" } },
+      { React: { width: "80%" } },
+      { JavaScript: { width: "80%" } },
+      { NodeJS: { width: "65%" } },
+      { "Ruby/Rails": { width: "70%" } },
+      { "UI Design": { width: "60%" } },
+      { Photoshop: { width: "75%" } },
+      { TypeScript: { width: "70%" } },
+      { SQL: { width: "80%" } },
+    ];
+    let delayDuration = 0
+    let bars = barStyles.map((style) => {
+      let barSkill = Object.keys(style)[0];
+      delayDuration+=0.1
+      return (
+        <Bar
+        delay = {delayDuration}
+          fill={this.state.animate ? style[barSkill] : { width: "0%" }}
+          skill={barSkill}
+          percent={style[barSkill].width}
+        />
+      );
+    });
+    return bars;
+  };
+
   render() {
-    const handleAnimate = () => this.setState({ animate: true });
-
-    const style = {
-      css: this.state.animate ? { width: "90%" } : { width: "0%" },
-      html: this.state.animate ? { width: "90%" } : { width: "0%" },
-      react: this.state.animate ? { width: "80%" } : { width: "0%" },
-      jS: this.state.animate ? { width: "80%" } : { width: "0%" },
-      nodeJS: this.state.animate ? { width: "65%" } : { width: "0%" },
-      rubyRails: this.state.animate ? { width: "70%" } : { width: "0%" },
-      uiDesign: this.state.animate ? { width: "60%" } : { width: "0%" },
-      photoshop: this.state.animate ? { width: "75%" } : { width: "0%" },
-      typeScript: this.state.animate ? { width: "70%" } : { width: "0%" },
-      SQL: this.state.animate ? { width: "80%" } : { width: "0%" },
-    };
-
     const ImgWithFallback = ({
       src,
       fallback,
-      type = 'image/webp',
+      type = "image/webp",
       alt,
       ...delegated
     }) => {
@@ -42,127 +61,51 @@ export default class About extends Component {
       );
     };
 
+    const skillBlurbs = [
+      {
+        title: "Fast",
+        blurb: "Fast load times and lag free interaction, my highest priority.",
+      },
+      {
+        title: "Responsive",
+        blurb: "My layouts will work on any device, big or small.",
+      },
+      {
+        title: "Intuitive",
+        blurb: "Strong preference for easy to use, intuitive UX/UI.",
+      },
+      {
+        title: "Dynamic",
+        blurb:
+          "Websites don't have to be static, I love making pages come to life.",
+      },
+    ];
+
     return (
-      <div className="about">
-        <Container fluid className="about-container">
+      <div id="about" className="container">
+       
           <div className="title">
             <h1>About</h1>
           </div>
           <Grid centered>
             <Grid.Column textAlign="center" mobile={16} tablet={8} computer={4}>
-              <div className="hexagon-wrapper">
-                <div className="hexagon">
-                  <ScrollAnimation
-                    className="animated-circle"
-                    animateIn="expand"
-                    animateOnce={true}
-                  >
-                    <div className="circle">
-                      <FontAwesomeIcon
-                        icon={faClock}
-                        style={{ color: "#ebeded", fontSize: 90 }}
-                      />
-                    </div>
-                  </ScrollAnimation>
-                </div>
-              </div>
-              <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
-                <div className="skills marker">Fast</div>
-                <p id="skills-blurb">
-                  Fast load times and lag free interaction, my highest priority.
-                </p>
-              </ScrollAnimation>
+              <SkillCircle icon={faClock} delay={0} />
+              <SkillBlurb text={skillBlurbs[0]} delay={0} />
             </Grid.Column>
 
             <Grid.Column textAlign="center" mobile={16} tablet={8} computer={4}>
-              <div className="hexagon-wrapper">
-                <div className="hexagon">
-                  <ScrollAnimation
-                    animateIn="expand"
-                    delay={500}
-                    className="animated-circle"
-                    animateOnce={true}
-                  >
-                    <div className="circle">
-                      <FontAwesomeIcon
-                        icon={faMobileAlt}
-                        style={{ color: "#ebeded", fontSize: 90 }}
-                      />
-                    </div>
-                  </ScrollAnimation>
-                </div>
-              </div>
-              <ScrollAnimation
-                animateIn="fadeInUp"
-                delay={500}
-                animateOnce={true}
-              >
-                <div className="skills marker">Responsive</div>
-                <p id="skills-blurb">
-                  My layouts will work on any device, big or small.
-                </p>
-              </ScrollAnimation>
+              <SkillCircle icon={faMobileAlt} delay={250} />
+              <SkillBlurb text={skillBlurbs[1]} delay={250} />
             </Grid.Column>
 
             <Grid.Column textAlign="center" mobile={16} tablet={8} computer={4}>
-              <div className="hexagon-wrapper">
-                <div className="hexagon">
-                  <ScrollAnimation
-                    animateIn="expand"
-                    animateOnce={true}
-                    delay={1000}
-                    className="animated-circle"
-                  >
-                    <div className="circle">
-                      <FontAwesomeIcon
-                        icon={faLightbulb}
-                        style={{ color: "#ebeded", fontSize: 90 }}
-                      />
-                    </div>
-                  </ScrollAnimation>
-                </div>
-              </div>
-              <ScrollAnimation
-                animateIn="fadeInUp"
-                delay={1000}
-                animateOnce={true}
-              >
-                <div className="skills marker">Intuitive</div>
-                <p id="skills-blurb">
-                  Strong preference for easy to use, intuitive UX/UI.
-                </p>
-              </ScrollAnimation>
+              <SkillCircle icon={faLightbulb} delay={500} />
+              <SkillBlurb text={skillBlurbs[2]} delay={500} />
             </Grid.Column>
 
             <Grid.Column textAlign="center" mobile={16} tablet={8} computer={4}>
-              <div className="hexagon-wrapper">
-                <div className="hexagon">
-                  <ScrollAnimation
-                    animateIn="expand"
-                    animateOnce={true}
-                    delay={1500}
-                    className="animated-circle"
-                  >
-                    <div className="circle">
-                      <FontAwesomeIcon
-                        icon={faHeartbeat}
-                        style={{ color: "#ebeded", fontSize: 90 }}
-                      />
-                    </div>
-                  </ScrollAnimation>
-                </div>
-              </div>
-              <ScrollAnimation
-                animateIn="fadeInUp"
-                delay={1500}
-                animateOnce={true}
-              >
-                <div className="skills marker">Dynamic</div>
-                <p id="skills-blurb">
-                  Websites don't have to be static, I love making pages come to
-                  life.
-                </p>
-              </ScrollAnimation>
+              <SkillCircle icon={faHeartbeat} delay={750} />
+              <SkillBlurb text={skillBlurbs[3]} delay={750} />
             </Grid.Column>
           </Grid>
 
@@ -176,11 +119,11 @@ export default class About extends Component {
                       delay={900}
                       animateOnce={true}
                     >
-                      <ImgWithFallback 
-                      className="profile"
-                      src={profile}
-                      fallback={profileJpg}
-                      alt="Profile Picture"
+                      <ImgWithFallback
+                        className="profile"
+                        src={profile}
+                        fallback={profileJpg}
+                        alt="Profile Picture"
                       />
                     </ScrollAnimation>
                   </div>
@@ -216,63 +159,13 @@ export default class About extends Component {
               animateOnce={true}
               className="graph"
               afterAnimatedIn={() => {
-                handleAnimate();
+                this.handleAnimate();
               }}
             >
-              <div className="bar flex">
-                <div className="bar fill" style={style.css}></div>
-                <div className="tag bold flex">CSS</div>
-                <span id="percent">90%</span>
-              </div>
-
-              <div className="bar flex">
-                <div className="bar fill" style={style.html}></div>
-                <div className="tag bold flex">HTML</div>
-                <span id="percent">90%</span>
-              </div>
-              <div className="bar flex">
-                <div className="bar fill" style={style.react}></div>
-                <div className="tag bold flex">React/Native</div>
-                <span id="percent">80%</span>
-              </div>
-              <div className="bar flex">
-                <div className="bar fill" style={style.jS}></div>
-                <div className="tag bold flex">Javascript</div>
-                <span id="percent">80%</span>
-              </div>
-              <div className="bar flex">
-                <div className="bar fill" style={style.nodeJS}></div>
-                <div className="tag bold flex">NodeJS</div>
-                <span id="percent">65%</span>
-              </div>
-              <div className="bar flex">
-                <div className="bar fill" style={style.rubyRails}></div>
-                <div className="tag bold flex">Ruby/Rails</div>
-                <span id="percent">70%</span>
-              </div>
-              <div className="bar flex">
-                <div className="bar fill" style={style.uiDesign}></div>
-                <div className="tag bold flex">UI Design</div>
-                <span id="percent">60%</span>
-              </div>
-              <div className="bar flex">
-                <div className="bar fill" style={style.photoshop}></div>
-                <div className="tag bold flex">Photoshop</div>
-                <span id="percent">75%</span>
-              </div>
-              <div className="bar flex">
-                <div className="bar fill" style={style.typeScript}></div>
-                <div className="tag bold flex">Typescript</div>
-                <span id="percent">70%</span>
-              </div>
-              <div className="bar flex">
-                <div className="bar fill" style={style.SQL}></div>
-                <div className="tag bold flex">SQL</div>
-                <span id="percent">80%</span>
-              </div>
+              {this.barChart()}
             </ScrollAnimation>
           </section>
-        </Container>
+      
       </div>
     );
   }

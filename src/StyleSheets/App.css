@@ -1,5 +1,3 @@
-
-
 ::-webkit-scrollbar {
   background: #000000;
   width: 6px;
@@ -11,8 +9,7 @@
 }
 
 body {
- 
-  background: url(./images/ClipartKey_472305.png),
+  background: url(../images/ClipartKey_472305.png),
     linear-gradient(
       189deg,
       rgba(0, 0, 0, 1) 8%,
@@ -24,6 +21,8 @@ body {
   background-attachment: fixed;
   background-blend-mode: multiply;
   background-position: bottom right;
+  overflow-x: hidden;
+  margin: 0;
 }
 
 .hexagon-wrapper {
@@ -59,7 +58,7 @@ body {
   justify-content: space-between;
   align-items: center;
   min-height: 8vh;
-  z-index: 5;
+  z-index: 1;
   position: fixed;
   width: 100%;
   top: 0;
@@ -79,6 +78,7 @@ body {
   font-size: 30px;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: aqua;
+  margin: auto;
 }
 
 .nav-links {
@@ -96,110 +96,37 @@ body {
   color: aqua;
 }
 .nav-links a {
+  text-transform: capitalize;
   color: #ebeded;
+  cursor: pointer;
 }
 
 .nav-links li {
   list-style: none;
 }
-.burger {
+.burger-wrapper {
   display: none;
   cursor: pointer;
   height: 40px;
   width: 40px;
   margin-right: 20px;
 }
-
-.about-container {
-  padding: 0px 80px;
+.highlight {
+  font-weight: bold;
+  font-size: 50pt;
+  color: aqua;
 }
 
-@media screen and (max-width: 1124px) {
-  .about-container {
-    padding: 0px 0px;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .nav-links {
-    display: flex;
-    width: 60%;
-    justify-content: space-around;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .nav-links {
-    padding: 0%;
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    top: 8vh;
-    background-color: rgb(0, 0, 0);
-    flex-direction: column;
-    align-items: center;
-    transform: translateX(-150%);
-    transition: transform 0.5s ease, opacity 1s ease;
-    opacity: 0;
-    z-index: -10;
-  }
-  .nav-links li {
-    opacity: 0;
-    width: 100%;
-    height: 50px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    border-bottom: solid #9c0039 1px;
-  }
-  .nav-links li a {
-    width: 100%;
-  }
-  .burger {
-    display: flex;
-  }
-  .text p {
-    font-size: 38px;
-  }
-  .highlight {
-    font-size: 48px;
-  }
-  #profile {
-    padding: 0px 0px !important;
-  }
-  #percent {
-    padding: 0 2px 0 0;
-  }
-  #home-title {
-    top: 30%;
-  }
-  body {
-    background: linear-gradient(
-      189deg,
-      rgba(0, 0, 0, 1) 8%,
-      rgba(0, 0, 0, 1) 49%,
-      rgba(20, 20, 20, 1) 71%,
-      rgba(28, 28, 28, 1) 89%
-    );
-    background-size: contain;
-    background-attachment: fixed;
-  }
-}
-
-@keyframes navLinkFade {
-  from {
-    opacity: 0;
-    transform: translateX(100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-}
-
-.nav-active {
-  transform: translateY(0%);
-  opacity: 1;
+#home-title {
+  position: absolute;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto !important;
+  text-align: center;
+  font-size: 39pt;
+  color: white;
 }
 
 .home {
@@ -210,42 +137,16 @@ body {
   justify-content: center;
 }
 
-.about {
-  padding: 60px 10px 20px;
-}
-
-.portfolio {
-  padding: 60px 10px 20px;
+.container {
+  padding: 60px 80px 20px;
 }
 
 .blog {
   height: 100vh;
-  background-color: #f4f4f4;
 }
 
 .contact {
   height: 100vh;
-}
-
-#home-title {
-  position: absolute;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: auto !important;
-}
-
-.text p {
-  text-align: center;
-  font-size: 39pt;
-  color: white;
-}
-
-.highlight {
-  font-weight: bold;
-  font-size: 50pt;
-  color: aqua;
 }
 
 .circle {
@@ -267,7 +168,7 @@ body {
 }
 .animated-circle {
   clip-path: circle(0% at 50% 50%);
-  transition: clip-path 1s;
+  transition: clip-path 0.5s;
 }
 .expand {
   clip-path: circle(50% at 50% 50%);
@@ -401,7 +302,6 @@ i.huge.icons {
 }
 
 .animate-profile {
-  animation-duration: 1s;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -433,9 +333,7 @@ i.huge.icons {
   background: rgba(0, 225, 225, 0.432);
   opacity: 1;
   padding: 0;
-  transition: 1.1s 0.2s width ease-in-out;
-  border: solid aqua 1px;
-  border-style: groove;
+
 }
 
 .bar .tag {
@@ -526,16 +424,16 @@ i.huge.icons {
   bottom: 0;
   width: 100%;
   height: 100%;
-  display: block;
+  /* display: block; */
 }
 
 .stars {
-  background: #000 url(./images/stars.png) repeat top center;
+  background: #000 url(../images/stars.png) repeat top center;
   z-index: 0;
 }
 
 .twinkling {
-  background: transparent url(./images/twinkling.png) repeat top center;
+  background: transparent url(../images/twinkling.png) repeat top center;
   z-index: 1;
 
   -moz-animation: move-twink-back 500s linear infinite;
@@ -543,4 +441,198 @@ i.huge.icons {
   -o-animation: move-twink-back 300s linear infinite;
   -webkit-animation: move-twink-back 500s linear infinite;
   animation: move-twink-back 300s linear infinite;
+}
+
+
+
+
+#volta {
+  background: url(../images/Volta-main.png) center center/cover;
+}
+
+#food-find {
+  background: url(../images/food-find.jpg) center center/cover;
+}
+
+#snappy-parking {
+  background: rgba(233, 255, 255, 0.493) url(../images/snappy-parking.png) center
+    center/cover;
+}
+
+#umber {
+  background: url(../images/umber-pic.png) center center/cover;
+}
+
+#gallery .card {
+  height: 240px;
+  max-width: 100%;
+  transition: opacity 0.5s;
+  width: calc(50vw - 120px);
+}
+
+.mix {
+  display: inline-block;
+}
+
+#gallery .text {
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+}
+
+#gallery .button {
+  box-sizing: inherit;
+  cursor: pointer;
+  display: inline-block;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  border: 2px solid #9c0039;
+  font-size: 13pt;
+  margin: 0 auto;
+  padding: 7px 0;
+  width: 170px;
+}
+
+#gallery .text,
+.button {
+  color: aqua;
+  opacity: 0;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+}
+
+#gallery .text .bold {
+  font-size: 30pt;
+}
+
+#gallery .mix .button:hover {
+  background: aqua;
+  color: #9c0039;
+  border: 2px solid aqua;
+}
+
+/* media screens / keyframes/ transforms below */
+
+@media screen and (max-width: 1124px) {
+  .container {
+    padding: 60px 80px 20px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+  }
+  #gallery .text .bold {
+    font-size: 20pt;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    padding: 0%;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 8vh;
+    background-color: rgb(0, 0, 0);
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(-150%);
+    transition: transform 0.5s ease, opacity 1s ease;
+    opacity: 0;
+    z-index: -10;
+  }
+  .nav-links li {
+    opacity: 0;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-bottom: solid #9c0039 1px;
+  }
+  .nav-links li a {
+    width: 100%;
+  }
+  .burger-wrapper {
+    display: flex;
+  }
+  .burger-icon {
+    color: aqua;
+    align-self: center;
+    margin: auto;
+    font-size: 20px;
+  }
+  #home-title {
+    font-size: 36px;
+  }
+  .highlight {
+    font-size: 48px;
+  }
+  #profile {
+    padding: 0px 0px !important;
+  }
+  #percent {
+    padding: 0 2px 0 0;
+  }
+  #home-title {
+    top: 30%;
+  }
+  body {
+    background: linear-gradient(
+      189deg,
+      rgba(0, 0, 0, 1) 8%,
+      rgba(0, 0, 0, 1) 49%,
+      rgba(20, 20, 20, 1) 71%,
+      rgba(28, 28, 28, 1) 89%
+    );
+    background-size: contain;
+    background-attachment: fixed;
+  }
+  .portfolio-container {
+    padding: 0px 0px;
+  }
+  #gallery .card {
+    width: 100vw;
+  }
+  .container {
+    padding: 60px 20px 20px;
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.nav-active {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+#gallery .mix:hover .card {
+  opacity: 0;
+}
+#gallery .mix:hover .text {
+  cursor: default;
+  opacity: 1;
+  top: 20%;
+}
+#gallery .mix:hover .button {
+  bottom: 20%;
+  opacity: 1;
 }
