@@ -15,7 +15,7 @@ export default function SkillCircle({ icon, delay }) {
                     <div className="circle">
                       <FontAwesomeIcon
                         icon={icon}
-                        style={{ color: "#ebeded", fontSize: 90 }}
+                        style={{ color: "#ebeded", fontSize: 50 }}
                       />
                     </div>
                   </ScrollAnimation>

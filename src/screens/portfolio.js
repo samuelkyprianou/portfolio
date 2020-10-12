@@ -1,7 +1,21 @@
 import React, { Component } from "react";
-import ScrollAnimation from "react-animate-on-scroll";
+import ProjectModal from "../components/ProjectModal";
+import GalleryCards from "../components/GalleryCards";
 
 export default class Portfolio extends Component {
+  state = {
+    open: false,
+    id: "",
+  };
+
+  handleModalModal(projectID) {
+    this.setState({ open: true, id: projectID });
+  }
+
+  handleModalClose() {
+    this.setState({ open: false, id: "" });
+  }
+
   render() {
     return (
       <div id="portfolio" className="container">
@@ -20,66 +34,14 @@ export default class Portfolio extends Component {
             flexWrap: "wrap",
           }}
         >
-          <ScrollAnimation
-            animateIn="backInRight"
-            delay={500}
-            animateOnce={true}
-            className="mix"
-          >
-            <div>
-              <div id="volta" className="card"></div>
-              <div className="text">
-                <div className="bold">Volta</div>
-                <span className="language">React JS</span>
-              </div>
-              <div className="button">Learn More</div>
-            </div>
-          </ScrollAnimation>
-          <ScrollAnimation
-            animateIn="backInLeft"
-            delay={500}
-            animateOnce={true}
-            className="mix"
-          >
-            <div>
-              <div id="food-find" className="card"></div>
-              <div className="text">
-                <div className="bold">Food-Find</div>
-                <span className="language">React JS / Ruby</span>
-              </div>
-              <div className="button">Learn More</div>
-            </div>
-          </ScrollAnimation>
-          <ScrollAnimation
-            animateIn="backInRight"
-            delay={500}
-            animateOnce={true}
-            className="mix"
-          >
-            <div>
-              <div id="snappy-parking" className="card"></div>
-              <div className="text">
-                <div className="bold">SnAppy-Parking</div>
-                <span className="language">JS / Ruby</span>
-              </div>
-              <div className="button">Learn More</div>
-            </div>
-          </ScrollAnimation>
-          <ScrollAnimation
-            animateIn="backInLeft"
-            delay={500}
-            animateOnce={true}
-            className="mix"
-          >
-            <div>
-              <div id="umber" className="card"></div>
-              <div className="text">
-                <div className="bold">Umber</div>
-                <span className="language">React Native / Node</span>
-              </div>
-              <div className="button">Learn More</div>
-            </div>
-          </ScrollAnimation>
+          <GalleryCards
+            openModel={(projectID) => this.handleModalModal(projectID)}
+          ></GalleryCards>
+          <ProjectModal
+            open={this.state.open}
+            id={this.state.id}
+            handleModalClose={() => this.handleModalClose()}
+          ></ProjectModal>
         </div>
       </div>
     );

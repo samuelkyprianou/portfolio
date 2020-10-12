@@ -9,7 +9,7 @@
 }
 
 body {
-  background: url(../images/ClipartKey_472305.png),
+  background: url(../images/background.png),
     linear-gradient(
       189deg,
       rgba(0, 0, 0, 1) 8%,
@@ -26,8 +26,8 @@ body {
 }
 
 .hexagon-wrapper {
-  height: 225px;
-  width: 225px;
+  height: 175px;
+  width: 175px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,8 +38,8 @@ body {
 }
 
 .hexagon {
-  height: 220px;
-  width: 220px;
+  height: 170px;
+  width: 170px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -141,17 +141,14 @@ body {
   padding: 60px 80px 20px;
 }
 
-.blog {
-  height: 100vh;
-}
 
 .contact {
   height: 100vh;
 }
 
 .circle {
-  height: 150px;
-  width: 150px;
+  height: 120px;
+  width: 120px;
   clip-path: circle(50% at 50% 50%);
   background: rgb(0, 0, 0);
   background: radial-gradient(
@@ -176,7 +173,7 @@ body {
 
 .title {
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
   position: relative;
   color: white;
 }
@@ -187,21 +184,16 @@ body {
 }
 
 .skills {
-  margin-top: 20px;
-  font-size: 32px;
-  font-weight: 800;
-  margin-bottom: 15px;
+  margin-top: 10px;
+  font-size: 28px;
+  font-weight: 600;
 }
 
-.huge.icon,
-i.huge.icons {
-  font-size: 6em !important;
-  margin: 0 !important;
-}
+
 
 .profile-pic-border {
-  height: 295px;
-  width: 295px;
+  height: 255px;
+  width: 255px;
   clip-path: polygon(
     30% 0%,
     70% 0%,
@@ -219,8 +211,8 @@ i.huge.icons {
 }
 
 .profile-wrappper {
-  height: 290px;
-  width: 290px;
+  height: 250px;
+  width: 250px;
   clip-path: polygon(
     30% 0%,
     70% 0%,
@@ -244,8 +236,8 @@ i.huge.icons {
 
 .profile {
   display: block;
-  height: 220px;
-  width: 220px;
+  height: 180px;
+  width: 180px;
   clip-path: polygon(
     30% 0%,
     70% 0%,
@@ -264,15 +256,15 @@ i.huge.icons {
 
 #blurb {
   font-size: 18px;
-  max-width: 80%;
   color: rgba(255, 255, 255, 0.856);
   line-height: 2em;
+  max-width: 630px;
 }
 
 .skills.who {
-  margin-bottom: 30px;
   font-size: 30pt;
   letter-spacing: 3px !important;
+  margin: 0;
 }
 
 #profile {
@@ -285,6 +277,7 @@ i.huge.icons {
   font-weight: 600;
   font-size: x-large;
   color: #00d3d3;
+  margin: 0;
 }
 
 .marker {
@@ -376,9 +369,9 @@ i.huge.icons {
 }
 
 #skills-blurb {
-  width: 90%;
+  width: 75%;
   margin: auto;
-  font-size: 18px;
+  font-size: 15px;
   color: rgba(255, 255, 255, 0.856);
 }
 
@@ -424,7 +417,6 @@ i.huge.icons {
   bottom: 0;
   width: 100%;
   height: 100%;
-  /* display: block; */
 }
 
 .stars {
@@ -443,31 +435,11 @@ i.huge.icons {
   animation: move-twink-back 300s linear infinite;
 }
 
-
-
-
-#volta {
-  background: url(../images/Volta-main.png) center center/cover;
-}
-
-#food-find {
-  background: url(../images/food-find.jpg) center center/cover;
-}
-
-#snappy-parking {
-  background: rgba(233, 255, 255, 0.493) url(../images/snappy-parking.png) center
-    center/cover;
-}
-
-#umber {
-  background: url(../images/umber-pic.png) center center/cover;
-}
-
 #gallery .card {
   height: 240px;
   max-width: 100%;
   transition: opacity 0.5s;
-  width: calc(50vw - 120px);
+  width: calc(50vw - 240px);
 }
 
 .mix {
@@ -521,6 +493,12 @@ i.huge.icons {
 @media screen and (max-width: 1124px) {
   .container {
     padding: 60px 80px 20px;
+  }
+  #gallery .card {
+    height: 240px;
+    max-width: 100%;
+    transition: opacity 0.5s;
+    width: calc(50vw - 100px);
   }
 }
 
@@ -625,7 +603,7 @@ i.huge.icons {
 }
 
 #gallery .mix:hover .card {
-  opacity: 0;
+  opacity: 0.1;
 }
 #gallery .mix:hover .text {
   cursor: default;
@@ -636,3 +614,5 @@ i.huge.icons {
   bottom: 20%;
   opacity: 1;
 }
+
+

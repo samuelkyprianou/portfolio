@@ -8,11 +8,11 @@ import "react-awesome-button/dist/styles.css";
 export default class Home extends Component {
   render() {
     return (
-      <div name="home" className="home">
+      <div id="home" className="home">
         <div className="stars">
         <div className="twinkling"></div>
         </div>
-        <div text id="home-title" textAlign="center">
+        <div id="home-title" >
           <ScrollAnimation animateIn="fadeInUp" delay={1000}>
               <p>
                 Hello, I'm <br></br>

@@ -8,9 +8,9 @@ export default class Navb extends Component {
 
   navLinks = () => {
     let linksNames = ["home", "about", "portfolio", "blog", "contact"];
-    let links = linksNames.map((link) => {
+    let links = linksNames.map((link, index) => {
       return (
-        <li>
+        <li key={`${link}${index}`}>
           <Link
             activeClass="active"
             to={link}

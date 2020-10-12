@@ -3,8 +3,8 @@ import React, { Component } from 'react'
 export default class Contact extends Component {
     render() {
         return (
-            <div name="contact" className="contact">
-                
+            <div id="contact" className="container">
+                <div style={{height: "400px"}}></div>
             </div>
         )
     }

@@ -35,6 +35,7 @@ export default class About extends Component {
       delayDuration+=0.1
       return (
         <Bar
+        key={barSkill}
         delay = {delayDuration}
           fill={this.state.animate ? style[barSkill] : { width: "0%" }}
           skill={barSkill}
@@ -136,7 +137,7 @@ export default class About extends Component {
                   animateOnce={true}
                   className="animate-profile"
                 >
-                  <p className="skills who marker">Who's This Guy?</p>
+                  <h1 className="skills who marker">Who's This Guy?</h1>
 
                   <p id="blurb">
                     I'm a recently qualified full stack software engineer living
