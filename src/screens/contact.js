@@ -18,8 +18,8 @@ export default class Contact extends Component {
     } = process.env;
 
     emailjs.send(seviceID, template, email, user).then(
-      console.log(seviceID)
       (result) => {
+        console.log(result.text);
         this.setState({messageSuccess: true})
       },
       (error) => {
