@@ -37,6 +37,11 @@ body.dimmable > .dimmer {
   position: fixed;
 }
 
+.dimmable{
+  overflow: hidden;
+
+}
+
 .ui.page.dimmer {
   position: fixed;
   -webkit-transform-style: "";
@@ -63,11 +68,8 @@ body.dimmable > .dimmer {
   z-index: 1001;
   text-align: left;
   background: rgba(0, 0, 0, 0.829);
-  border: solid 2px rgba(0, 0, 0, 0.788);
-  -webkit-box-shadow: 1px 7px 10px 3px rgba(156, 0, 57, 0.445),
-    1px 10px 25px 15px rgba(255, 255, 255, 0.288);
-  box-shadow: 10px 0px 15px rgba(156, 0, 57, 0.342),
-    0px 0px 10px rgba(255, 255, 255, 0.274);
+  border:  1px rgb(90, 90, 90);
+  border-style: ridge;
   -webkit-transform-origin: 50% 25%;
   transform-origin: 50% 25%;
   -webkit-box-flex: 0;

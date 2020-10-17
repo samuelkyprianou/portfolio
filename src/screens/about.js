@@ -112,7 +112,7 @@ export default class About extends Component {
 
           <section id="profile">
             <Grid columns={2} centered style={{ padding: "inherit" }}>
-              <Grid.Column className="profile-pic" tablet={15} computer={6}>
+              <Grid.Column className="profile-pic" tablet={16} computer={7}>
                 <div className="profile-pic-border">
                   <div className="profile-wrappper">
                     <ScrollAnimation
@@ -130,7 +130,7 @@ export default class About extends Component {
                   </div>
                 </div>
               </Grid.Column>
-              <Grid.Column tablet={15} computer={9} textAlign="center">
+              <Grid.Column textAlign="center">
                 <ScrollAnimation
                   animateIn="fadeInRight"
                   delay={500}

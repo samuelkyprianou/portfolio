@@ -62,25 +62,27 @@
   color: rgb(255, 255, 255);
   padding: 35px 80px 70px 25px;
   text-align: left;
+  font-family: 'Montserrat', sans-serif;
 }
-.info-box .modal-title {
-  font-family: "Raleway-bold";
-  font-size: 22pt;
+.info-box .modal-title {  
+  font-size: 26pt;
   line-height: 30pt;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.2em;
 }
 .info-box .tag {
   border-bottom: 1px solid #9c0039b4;
   color: #c0c0c0;
   display: block;
-  font-family: "Raleway-bold";
   font-size: 11pt;
   font-weight: 300;
-  padding-bottom: 15px;
+  padding: 10px 0px 15px;
 }
 .info-box .detail {
-  font-size: 11pt;
+  font-size: 15pt;
   line-height: 18pt;
   margin-top: 15px;
+  font-weight: 200;
 }
 .info-box .mdi-open-in-new {
   font-size: 11pt;
@@ -88,18 +90,20 @@
   position: relative;
 }
 .info-box .modal-button {
+  text-transform: uppercase;
   border: solid 2px #9c0039b4;
   bottom: 15px;
   color: #fff;
   cursor: pointer;
   font-size: 10pt;
-  font-weight: 600;
+  font-weight: 300;
   left: 25px;
   padding: 11px 30px;
   pointer-events: none;
   position: absolute;
   transition: all 0.5s;
   visibility: hidden;
+  letter-spacing: 0.2em;
 }
 .carousel-transition {
   transition: 0.7s;
@@ -117,7 +121,7 @@
   visibility: visible;
 }
 .info-box .modal-button:hover {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.603);
   color: #e31b6d;
 }
 

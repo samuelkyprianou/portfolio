@@ -15,8 +15,7 @@ export default class Home extends Component {
         <div id="home-title" >
           <ScrollAnimation animateIn="fadeInUp" delay={1000}>
               <p>
-                Hello, I'm <br></br>
-                <span className="highlight">Sam Kyprianou</span>. <br></br>I'm a
+                Hello, I'm <span className="highlight">Sam Kyprianou</span>. <br/> I'm a
                 full-stack web developer.{" "}
               </p>
               <Link

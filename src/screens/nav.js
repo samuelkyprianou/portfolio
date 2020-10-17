@@ -7,7 +7,7 @@ export default class Navb extends Component {
   state = { activeNavBar: false };
 
   navLinks = () => {
-    let linksNames = ["home", "about", "portfolio", "blog", "contact"];
+    let linksNames = ["home", "about", "portfolio", "contact"];
     let links = linksNames.map((link, index) => {
       return (
         <li key={`${link}${index}`}>
@@ -54,7 +54,6 @@ export default class Navb extends Component {
     return (
       <nav className="nav">
         <div className="logo">
-          {" "}
           <h4>SK</h4>
         </div>
         <ul className="nav-links" id="nav-links">

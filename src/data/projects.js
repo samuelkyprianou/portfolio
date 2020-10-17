@@ -1,5 +1,3 @@
-import React from "react";
-
 const projectsList = [
   { id: "volta", name: "Volta", language: "React JS" },
   { id: "food-find", name: "FoodFinder", language: "React JS / Ruby" },
