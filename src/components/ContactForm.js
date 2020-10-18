@@ -75,7 +75,7 @@ export default function ContactForm({
           className="message-style"
          
           >
-                {messageError && (
+                {messageSuccess && (
               <>
                 <FontAwesomeIcon
                   icon={faCheckDouble}
