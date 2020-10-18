@@ -17,9 +17,8 @@ export default class Contact extends Component {
       REACT_APP_USER_ID: user,
     } = process.env;
 
-    emailjs.send("service_w8xe4o1", "contact_form", email, "user_PZfNUR3qu3sCp2VgldHc7").then(
+    emailjs.send(seviceID, template, email, user).then(
       (result) => {
-        console.log(result.text);
         this.setState({messageSuccess: true})
       },
       (error) => {
