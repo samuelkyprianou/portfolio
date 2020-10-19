@@ -19,9 +19,10 @@ export default function ProjectModal({ open, id, handleModalClose }) {
   }, [id]);
 
   const getGalleryImages = () => {
-    let galleryImages = currentProject.images.map((image) => {
+    let galleryImages = currentProject.images.map((image, i) => {
       return (
         <div
+        key={`${image}`}
           className="slide"
           style={{
             background: `url(${image}), center`,
