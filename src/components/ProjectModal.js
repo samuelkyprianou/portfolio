@@ -7,22 +7,44 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import projects from "../data/projects.js";
 import InfoBox from "./InfoBox";
+import Loader from "react-loader-spinner";
 
 export default function ProjectModal({ open, id, handleModalClose }) {
   const [currentProject, setCurrentProject] = useState(false);
+  const [isLoading, setIsLoading] = useState(true)
   const componentRef = useRef();
   const { width } = useContainerDimensions(componentRef, open);
 
   useEffect(() => {
-    let project = projects.projectInfo.find((project) => project.id === id);
-    setCurrentProject(project);
+    if (id) {
+      let project = projects.projectInfo.find((project) => project.id === id);
+      cacheImages(project.images)
+      setCurrentProject(project);
+    }
+    else {
+      setIsLoading(true)
+      setCurrentProject(false)
+    }
   }, [id]);
+
+  const cacheImages = async (srcArray) => {
+    const promises = await srcArray.map((src) => {
+      return new Promise(function (resolve, reject) {
+        let img = new Image();
+        img = src;
+        img.onload = resolve();
+        img.onerror = reject();
+      });
+    });
+    await Promise.all(promises);
+    setIsLoading(false);
+  };
 
   const getGalleryImages = () => {
     let galleryImages = currentProject.images.map((image, i) => {
       return (
         <div
-        key={`${image}`}
+        key={`${image}${i}`}
           className="slide"
           style={{
             background: `url(${image}), center`,
@@ -57,7 +79,14 @@ export default function ProjectModal({ open, id, handleModalClose }) {
       <div className="carousel-wrap" style={{ width: "100%" }}>
         <div className="window" ref={componentRef}>
           <div id="carousel" style={{ left: width * -1 }}>
-            {currentProject && getGalleryImages()}
+            {isLoading ?     <Loader
+          type="Puff"
+          color="white"
+          height={"100%"}
+          width={"100%"}
+          visible={isLoading}
+        /> :  currentProject && getGalleryImages() }
+            
           </div>
           <div className="mdi mdi-chevron-left" onClick={() => handleSlide(1)}>
             <FontAwesomeIcon

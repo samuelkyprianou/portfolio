@@ -63,7 +63,7 @@ function App() {
           type="Puff"
           color="white"
           height={"100vh"}
-          width={"100vm"}
+          width={"100%"}
           visible={isLoading}
         />
       ) : (

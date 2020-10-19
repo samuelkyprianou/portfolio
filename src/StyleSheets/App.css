@@ -22,7 +22,6 @@
   background-blend-mode: multiply;
   background-position: bottom right;
   overflow-x: hidden;
-  margin: 0;
 }
 
 .hexagon-wrapper {
@@ -716,16 +715,15 @@ letter-spacing: 0.1em;
   #percent {
     padding: 0 2px 0 0;
   }
-  body {
+  .app {
     background: linear-gradient(
       189deg,
       rgba(0, 0, 0, 1) 8%,
       rgba(0, 0, 0, 1) 49%,
       rgba(20, 20, 20, 1) 71%,
       rgba(28, 28, 28, 1) 89%
-    );
+    ) fixed;
     background-size: contain;
-    background-attachment: fixed;
   }
   #gallery .card {
     width: 100vw;

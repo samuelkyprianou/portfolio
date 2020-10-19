@@ -8,7 +8,7 @@ export default class Portfolio extends Component {
     id: "",
   };
 
-  handleModalModal(projectID) {
+  handleModalOpen(projectID) {
     this.setState({ open: true, id: projectID });
   }
 
@@ -35,7 +35,7 @@ export default class Portfolio extends Component {
           }}
         >
           <GalleryCards
-            openModel={(projectID) => this.handleModalModal(projectID)}
+            openModel={(projectID) => this.handleModalOpen(projectID)}
           ></GalleryCards>
           <ProjectModal
             open={this.state.open}
