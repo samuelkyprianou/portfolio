@@ -59,13 +59,18 @@ function App() {
   return (
     <>
       {isLoading ? (
-        <Loader
-          type="Puff"
-          color="white"
-          height={"100vh"}
-          width={"100%"}
-          visible={isLoading}
-        />
+        <div className="loader" style={{height: "100vh", display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "black"}}>
+
+          <Loader
+            type="TailSpin"
+            color="aqua"
+            height={200}
+            width={200}
+             />
+        
+         
+          <div style={{fontSize:"25pt", color:"white", position:"absolute"}}>SK</div>
+        </div>
       ) : (
         <div className="app">
           <Navb />

@@ -38,8 +38,8 @@ body.dimmable > .dimmer {
 }
 
 .dimmable{
+  background: black;
   overflow: hidden;
-
 }
 
 .ui.page.dimmer {

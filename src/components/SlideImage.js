@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Loader from "react-loader-spinner";
 
-export default function SlideImage({ img, width }) {
+export default function SlideImage({ img, width, height }) {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -15,27 +15,21 @@ export default function SlideImage({ img, width }) {
       img.onload = resolve();
       img.onerror = reject();
     });
-    setIsLoading(false);
+    
+    setTimeout(function(){setIsLoading(false); }, 2000);
   };
 
   return (
     <>
       {isLoading ? (
         <Loader
-          type="Puff"
+        className="slide"
+          type="TailSpin"
           color="white"
-          height={"100%"}
           width={width}
-          visible={isLoading}
         />
       ) : (
-        <div
-          className="slide"
-          style={{
-            background: `url(${img}), center`,
-            width: width,
-          }}
-        ></div>
+        <img src={img} alt="slide" style={{width: width, height: height}}></img>
       )}
     </>
   );

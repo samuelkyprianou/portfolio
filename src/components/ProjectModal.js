@@ -13,7 +13,7 @@ import SlideImage from "./SlideImage.js"
 export default function ProjectModal({ open, id, handleModalClose }) {
   const [currentProject, setCurrentProject] = useState(false);
   const componentRef = useRef();
-  const { width } = useContainerDimensions(componentRef, open);
+  const { width, height } = useContainerDimensions(componentRef, open);
 
   useEffect(() => {
     let project = projects.projectInfo.find((project) => project.id === id);
@@ -25,7 +25,7 @@ export default function ProjectModal({ open, id, handleModalClose }) {
   const getGalleryImages = () => {
     let slideImages = currentProject.images.map((image, i) => {
       return (
-        <SlideImage img={image} width={width} key={`image${i}`}/>
+        <SlideImage img={image} width={width} height={height} key={`image${i}`}/>
       );
     });
     return slideImages;
@@ -52,7 +52,7 @@ export default function ProjectModal({ open, id, handleModalClose }) {
   return (
     <Modal onClose={() => handleModalClose()} open={open}>
       <div className="carousel-wrap" style={{ width: "100%" }}>
-        <div className="window" ref={componentRef}>
+        <div className="window" ref={componentRef} style={{height: "100%"}}>
           <div id="carousel" style={{ left: width * -1 }}>
               {currentProject && getGalleryImages()}
           </div>

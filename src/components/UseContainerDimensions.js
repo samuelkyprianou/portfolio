@@ -10,11 +10,11 @@ export const useContainerDimensions = ( myRef, open ) => {
   
     useEffect(() => {
       const handleResize = () => {
-        if (myRef.current)
+        if (open)
         setDimensions(getDimensions())
       }
   
-      if (open) {
+      if (myRef.current) {
         setDimensions(getDimensions())
       }
   

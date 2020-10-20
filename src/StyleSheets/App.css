@@ -1,6 +1,6 @@
 ::-webkit-scrollbar {
   background: #000000;
-  width: 6px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -8,37 +8,22 @@
   border-radius: 4px;
 }
 
-.app {
-  background: url(../images/background.png),
-    linear-gradient(
-      189deg,
-      rgba(0, 0, 0, 1) 8%,
-      rgba(0, 0, 0, 1) 49%,
-      rgba(20, 20, 20, 1) 71%,
-      rgba(28, 28, 28, 1) 89%
-    );
-  background-size: contain;
-  background-attachment: fixed;
-  background-blend-mode: multiply;
-  background-position: bottom right;
-  overflow-x: hidden;
-}
+
 
 .hexagon-wrapper {
-  height: 175px;
-  width: 175px;
+  height: 155px;
+  width: 155px;
   display: flex;
   justify-content: center;
   align-items: center;
   clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
   background: rgba(255, 255, 255, 0.71);
-
   margin: auto;
 }
 
 .hexagon {
-  height: 170px;
-  width: 170px;
+  height: 150px;
+  width: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,7 +41,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 8vh;
+  min-height: 6vh;
   z-index: 1;
   position: fixed;
   width: 100%;
@@ -71,9 +56,9 @@
 }
 
 .logo {
-  margin-left: 35px;
-  height: 60px;
-  width: 60px;
+  margin-left: 15px;
+  height: 40px;
+  width: 40px;
   clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
   background-color: #9c003979;
   display: flex;
@@ -94,7 +79,7 @@
   letter-spacing: 0px;
   margin: auto;
   color: #000000;
-  font-size: 25px;
+  font-size: 15px;
   margin: auto;
 }
 
@@ -106,7 +91,7 @@
   margin: initial;
   text-decoration: none;
   letter-spacing: 3px;
-  font-size: 20px;
+  font-size: 15px;
   text-transform: uppercase;
   color: #ebeded;
   font-weight: 200;
@@ -124,14 +109,14 @@
 .burger-wrapper {
   display: none;
   cursor: pointer;
-  height: 40px;
-  width: 40px;
-  margin-right: 20px;
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
 }
 .highlight {
   font-family: "Raleway", sans-serif;
   color: aqua;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 #home-title {
@@ -143,26 +128,27 @@
   margin: auto !important;
   text-align: center;
   color: white;
-  font-size: 42pt;
+  font-size: 36pt;
   line-height: 46pt;
   font-weight: 200;
 }
 
 .home {
-  height: 100vh;
+ height: 100vh;
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100vw;
 }
 
 .container {
-  padding: 60px 100px 140px;
+  padding: 60px 120px 140px;
 }
 
 .circle {
-  height: 120px;
-  width: 120px;
+  height: 100px;
+  width: 100px;
   clip-path: circle(50% at 50% 50%);
   background: rgb(0, 0, 0);
   background: radial-gradient(
@@ -197,12 +183,12 @@
 .title h1 {
   align-items: center;
   letter-spacing: 0.09em;
-  font-size: 30pt;
+  font-size: 27pt;
 }
 
 .profile-pic-border {
-  height: 285px;
-  width: 285px;
+  height: 245px;
+  width: 245px;
   clip-path: polygon(
     30% 0%,
     70% 0%,
@@ -220,8 +206,8 @@
 }
 
 .profile-wrappper {
-  height: 280px;
-  width: 280px;
+  height: 240px;
+  width: 240px;
   clip-path: polygon(
     30% 0%,
     70% 0%,
@@ -245,8 +231,8 @@
 
 .profile {
   display: block;
-  height: 225px;
-  width: 225px;
+  height: 185px;
+  width: 185px;
   clip-path: polygon(
     30% 0%,
     70% 0%,
@@ -259,12 +245,9 @@
   );
 }
 
-.ui.grid + .grid {
-  margin-top: 6rem;
-}
 
 #blurb {
-  font-size: 22px;
+  font-size: 18px;
   color: rgba(255, 255, 255, 0.856);
   line-height: 1.6em;
   max-width: 630px;
@@ -272,12 +255,12 @@
 }
 
 #profile {
-  margin: 80px auto 0px;
+  margin: 50px auto 0px;
 }
 
 #special {
-  font-weight: 500;
-  font-size: x-large;
+  font-weight: 400;
+  font-size: 20px;
   color: #00d3d3;
   margin: 0;
   font-family: "Raleway", sans-serif;
@@ -287,14 +270,14 @@
   color: #9c0039;
   font-family: "Raleway", sans-serif;
   letter-spacing: 1px;
-  font-size: 20pt;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-weight: 700;
+  font-size: 18pt;
+  margin-top: 7px;
+  margin-bottom: 4px;
+  font-weight: 500;
 }
 
 .who {
-  font-size: 36pt;
+  font-size: 34pt;
 }
 
 .profile-pic {
@@ -323,8 +306,8 @@
   background-color: #00000000;
   color: #fff;
   font-size: 7pt;
-  height: 35px;
-  margin: 0 0 26px 0;
+  height: 30px;
+  margin: 0 0 24px 0;
   position: relative;
 }
 
@@ -357,7 +340,7 @@
 }
 
 .graph {
-  padding: 20px 120px;
+  padding: 20px 60px;
   margin-top: 80px;
 }
 
@@ -379,9 +362,9 @@
 #skills-blurb {
   width: 75%;
   margin: auto;
-  font-size: 20px;
+  font-size: 16px;
   color: rgba(255, 255, 255, 0.856);
-  font-weight: 100;
+  font-weight: 200;
 }
 
 @keyframes move-twink-back {
@@ -444,11 +427,11 @@
 }
 
 #gallery .card {
-  height: 240px;
+  height: 200px;
   max-width: 100%;
   transition: opacity 0.5s;
   -webkit-transition: opacity 0.5s;
-  width: calc(50vw - 200px);
+  width: calc(50vw - 220px);
 }
 
 .mix {
@@ -488,7 +471,7 @@
 }
 
 #gallery .text .bold {
-  font-size: 30pt;
+  font-size: 28pt;
   font-family: 'Raleway', sans-serif;
 letter-spacing: 0.1em;
 }
@@ -519,6 +502,7 @@ letter-spacing: 0.1em;
 .credit-wrapper {
   color: #a8b2d1;
   line-height: 1;
+  font-size: 12px;
 }
 
 .credit-wrapper a {
@@ -530,7 +514,7 @@ letter-spacing: 0.1em;
 .sociallinks-wrapper {
   display: block;
   width: 100%;
-  max-width: 270px;
+  max-width: 210px;
   color: #a8b2d1;
   margin: 0px auto 5px;
 }
@@ -547,9 +531,8 @@ letter-spacing: 0.1em;
 }
 
 .footer-icons {
-  width: "20px";
-  height: "20px";
-  padding: "10px";
+  width: 5px;
+  height: 5px;
   border-radius: 30px;
   background-color: black;
   transition: all 0.4s;
@@ -560,12 +543,11 @@ letter-spacing: 0.1em;
 }
 
 .side-content-wrapper {
-  width: 40px;
+  width: 30px;
   position: fixed;
   bottom: 0px;
-
   z-index: 10;
-  color: #a8b2d1;
+
 }
 
 .left {
@@ -607,9 +589,6 @@ letter-spacing: 0.1em;
 }
 
 .left .icons {
-  width: 20px;
-  height: 20px;
- 
   border-radius: 30px;
   background-color: rgba(0, 0, 0, 0);
   transition: all 0.2s;
@@ -623,18 +602,18 @@ letter-spacing: 0.1em;
 
 .right a:hover {
   color: aqua;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.15em;
 }
 
 .side-lines {
-  width: 2px;
-  height: 150px;
+  width: 1px;
+  height: 130px;
   background: rgba(255, 255, 255, 0.705);
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .left .side-lines {
-  margin-top: 10px
+  margin-top: 5px
 }
 
 .gallery-mobile {
@@ -644,6 +623,9 @@ letter-spacing: 0.1em;
 /* media screens / keyframes/ transforms below */
 
 @media screen and (max-width: 1124px) {
+}
+
+@media screen and (max-width: 1024px) {
   .container {
     padding: 60px 80px 20px;
   }
@@ -652,9 +634,6 @@ letter-spacing: 0.1em;
     max-width: 100%;
     width: calc(50vw - 100px);
   }
-}
-
-@media screen and (max-width: 1024px) {
   .nav-links {
     display: flex;
     width: 60%;
@@ -677,13 +656,14 @@ letter-spacing: 0.1em;
     text-align: center;
     position: fixed;
     width: 100%;
-    top: 8vh;
+    top: 6vh;
     background-color: rgb(0, 0, 0);
     flex-direction: column;
     align-items: center;
     transform: translateX(-150%);
     transition: transform 0.5s ease, opacity 1s ease;
     -webkit-transition: transform 0.5s ease, opacity 1s ease;
+    -webkit-transform: translateX(-150%);
     opacity: 0;
     z-index: -10;
   }
@@ -715,15 +695,14 @@ letter-spacing: 0.1em;
   #percent {
     padding: 0 2px 0 0;
   }
-  .app {
+  .body {
     background: linear-gradient(
       189deg,
       rgba(0, 0, 0, 1) 8%,
       rgba(0, 0, 0, 1) 49%,
       rgba(20, 20, 20, 1) 71%,
       rgba(28, 28, 28, 1) 89%
-    ) fixed;
-    background-size: contain;
+    )
   }
   #gallery .card {
     width: 100vw;
