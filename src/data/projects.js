@@ -10,9 +10,9 @@ const projectInfo = [
     title: "Volta",
     tag: "ROUTE PLANNER FOR ELECTRIC VEHICLES",
     images: [
-      require("../images/volta3.png"),
-      require("../images/volta1.png"),
-      require("../images/volta2.png"),
+      'volta3',
+      'volta1',
+      'volta2',
     ],
     description:
       "Electric vehicle based web app with a route planner functionality. Adapts to the users input of battery capacity and plans optimal routes with the most efficient charging station waypoint.",
@@ -24,9 +24,9 @@ const projectInfo = [
     title: "FoodFinder",
     tag: "DISCOVER LOCAL RESTAURANTS IN YOUR AREA",
     images: [
-      require("../images/food-find3.png"),
-      require("../images/food-find1.png"),
-      require("../images/food-find2.png"),
+      "food-find3",
+      "food-find1",
+      "food-find2",
     ],
     description:
       "FoodFinder is a web app that lets you find a restaurant near you and find out which streaming services it is currently available on. Users are able to create an account and log in. User details are saved in the browser session.",
@@ -38,10 +38,10 @@ const projectInfo = [
     title: "SnAppyParking",
     tag: "FIND PARKING IN THE BOROUGH OF CAMDEN",
     images: [
-      require("../images/snappy-parking4.png"),
-      require("../images/snappy-parking1.png"),
-      require("../images/snappy-parking2.png"),
-      require("../images/snappy-parking3.png"),
+      "snappy-parking4",
+      "snappy-parking1",
+      "snappy-parking2",
+      "snappy-parking3",
     ],
     description:
       "A handy web app designed with efficiency in mind. Allowing users to search and purchase available parking spaces in the borough of Camden.",
@@ -53,9 +53,9 @@ const projectInfo = [
     title: "Umber",
     tag: "PROUDLY BUILT BY BROKE STUDENTS, FOR BROKE STUDENTS.",
     images: [
-      require("../images/umber3.png"),
-      require("../images/umber1.png"),
-      require("../images/umber2.png"),
+      "umber3",
+      "umber1",
+      "umber2",
     ],
     description:
       "Transfer money from your bank to someone else's in seconds. landing later this year...",

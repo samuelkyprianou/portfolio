@@ -8,7 +8,7 @@ import { faClock, faLightbulb } from "@fortawesome/free-regular-svg-icons";
 import SkillCircle from "../components/SkillCircle";
 import SkillBlurb from "../components/SkillBlurb";
 import Bar from "../components/Bar";
-
+import ImgWithFallback from "../components/ImgWithFallback"
 import "../StyleSheets/Grid.css"
 
 export default class About extends Component {
@@ -47,20 +47,6 @@ export default class About extends Component {
   };
 
   render() {
-    const ImgWithFallback = ({
-      src,
-      fallback,
-      type = "image/webp",
-      alt,
-      ...delegated
-    }) => {
-      return (
-        <picture>
-          <source srcSet={src} type={type} />
-          <img src={fallback} alt={alt} {...delegated} />
-        </picture>
-      );
-    };
 
     const skillBlurbs = [
       {

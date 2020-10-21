@@ -38,7 +38,6 @@ body.dimmable > .dimmer {
 }
 
 .dimmable{
-  background: black;
   overflow: hidden;
 }
 
