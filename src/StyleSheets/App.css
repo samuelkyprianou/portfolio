@@ -8,8 +8,6 @@
   border-radius: 4px;
 }
 
-
-
 .hexagon-wrapper {
   height: 155px;
   width: 155px;
@@ -70,7 +68,7 @@
   transition: all 2.5s;
 }
 
-.logo:hover{
+.logo:hover {
   -webkit-text-stroke-color: #9c0039;
   background-color: rgba(0, 255, 255, 0.486);
 }
@@ -134,7 +132,7 @@
 }
 
 .home {
- height: 100vh;
+  height: 100vh;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -245,6 +243,17 @@
   );
 }
 
+.loading-text {
+  font-size: 25pt;
+  color: aqua;
+  position: absolute;
+  transition: all  3s;
+  transition-delay: 1s;
+}
+
+.loading-text.fadeIn {
+  color: #9c0039
+}
 
 #blurb {
   font-size: 18px;
@@ -336,7 +345,6 @@
   z-index: 1;
   font-size: 13px;
   letter-spacing: -0.02em;
-
 }
 
 .graph {
@@ -472,12 +480,12 @@
 
 #gallery .text .bold {
   font-size: 28pt;
-  font-family: 'Raleway', sans-serif;
-letter-spacing: 0.1em;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 0.1em;
 }
-#gallery .text .language{
+#gallery .text .language {
   color: white;
-} 
+}
 
 #gallery .mix .button:hover {
   background: rgba(0, 255, 255, 0.548);
@@ -547,7 +555,6 @@ letter-spacing: 0.1em;
   position: fixed;
   bottom: 0px;
   z-index: 10;
-
 }
 
 .left {
@@ -613,7 +620,7 @@ letter-spacing: 0.1em;
 }
 
 .left .side-lines {
-  margin-top: 5px
+  margin-top: 5px;
 }
 
 .gallery-mobile {
@@ -725,9 +732,8 @@ letter-spacing: 0.1em;
     border-bottom-right-radius: 50px;
   }
   #gallery .button {
-   display: none;
+    display: none;
   }
-  
 }
 
 @keyframes navLinkFade {
@@ -746,8 +752,7 @@ letter-spacing: 0.1em;
   opacity: 1;
 }
 
-
-.circle:hover{
+.circle:hover {
   height: 135px;
   width: 135px;
 }
@@ -766,4 +771,3 @@ letter-spacing: 0.1em;
     opacity: 1;
   }
 }
-  

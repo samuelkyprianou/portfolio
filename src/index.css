@@ -1,11 +1,8 @@
-
-  
-
 body {
-  font-family: 'Montserrat', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background: url(./images/background.png),
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: url(./images/background.png),
     linear-gradient(
       189deg,
       rgba(0, 0, 0, 1) 8%,
@@ -13,24 +10,22 @@ body {
       rgba(20, 20, 20, 1) 71%,
       rgba(28, 28, 28, 1) 89%
     );
-  background-size: contain;  
+  background-size: contain;
   background-attachment: fixed;
   background-position: bottom right;
   overflow-x: hidden;
   margin: 0;
-  }
+}
 
-  @media screen and (max-width: 768px) { 
-    body {
-      background: linear-gradient(
+@media screen and (max-width: 768px) {
+  body {
+    background: linear-gradient(
         189deg,
         rgba(0, 0, 0, 1) 8%,
         rgba(0, 0, 0, 1) 49%,
         rgba(20, 20, 20, 1) 71%,
         rgba(28, 28, 28, 1) 89%
-      ) fixed
-    }
-
+      )
+      fixed;
   }
-
-  
+}

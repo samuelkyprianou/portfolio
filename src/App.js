@@ -6,10 +6,10 @@ import Portfolio from "./screens/portfolio";
 import Contact from "./screens/contact";
 import Footer from "./components/Footer";
 import SideContent from "./components/SideContent";
-import Loader from "react-loader-spinner";
+import { TailSpin } from "./components/Spinner.js";
+import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css/animate.compat.css";
 import "./StyleSheets/App.css";
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -66,23 +66,33 @@ function App() {
       });
     });
     await Promise.all(promises);
-    setIsLoading(false);
+    setTimeout(function(){setIsLoading(false)},5500)
   };
 
   return (
     <>
       {isLoading ? (
-        <div className="loader" style={{height: "100vh", display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "black"}}>
+        <div
+          className="loader"
+          style={{
+            height: "100vh",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundColor: "black",
+          }}
+        >
+          <TailSpin  />
 
-          <Loader
-            type="TailSpin"
-            color="aqua"
-            height={200}
-            width={200}
-             />
-        
-         
-          <div style={{fontSize:"25pt", color:"white", position:"absolute"}}>SK</div>
+          <ScrollAnimation
+            animateIn="fadeIn"
+            duration={1.5}
+            animateOnce={true}
+            delay={1000}
+            className="loading-text"
+          >
+            SK
+          </ScrollAnimation>
         </div>
       ) : (
         <div className="app">
