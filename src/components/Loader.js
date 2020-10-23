@@ -44,6 +44,7 @@ export default function Loader({ setIsLoading }) {
     cacheImages(imgs);
     setTimeout(function () {
       setIsLoading(false);
+      console.log("loader finisher")
     }, 5000);
   });
 
@@ -56,7 +57,7 @@ export default function Loader({ setIsLoading }) {
         img.onerror = reject();
       });
     });
-    await Promise.all(promises);
+    await Promise.all(promises).then(() => console.log("finished"))
   };
 
   return (
