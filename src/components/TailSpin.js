@@ -20,7 +20,6 @@ export const TailSpin = () => (
       <g transform="translate(1 1)">
         <circle fill="#9c0039" cx="18" cy="0" r={1}>
           <animateTransform
-          className="animate"
             attributeName="transform"
             type="rotate"
             from="360 18 18"
@@ -28,7 +27,7 @@ export const TailSpin = () => (
             begin="2.5s"
             dur="0.5s"
             repeatCount="1"
-          />
+            />
         </circle>
         <circle fill="aqua" cx="18" cy="3" r={0.9}>
           <animateTransform
@@ -39,7 +38,7 @@ export const TailSpin = () => (
             begin="2"
             dur="0.5s"
             repeatCount="1"
-          />
+            />
         </circle>
         <circle fill="aqua" cx="18" cy="6" r={0.8}>
           <animateTransform
@@ -50,7 +49,7 @@ export const TailSpin = () => (
             begin="1.5s"
             dur="0.5s"
             repeatCount="1"
-          />
+            />
         </circle>
         <circle fill="aqua" cx="18" cy="9" r={0.7}>
           <animateTransform
@@ -61,10 +60,11 @@ export const TailSpin = () => (
             begin="1s"
             dur="0.5s"
             repeatCount="1"
-          />
+            />
         </circle>
         <circle fill="aqua" cx="18" cy="12" r={0.6}>
           <animateTransform
+          className="animate"
             attributeName="transform"
             type="rotate"
             from="360 18 18"
@@ -72,25 +72,10 @@ export const TailSpin = () => (
             begin="0.5"
             dur="0.5s"
             repeatCount="1"
-          />
+            />
         </circle>
       </g>
     </g>
   </svg>
 );
 
-// TailSpin.propTypes = {
-//   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-//   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-//   color: PropTypes.string,
-//   label: PropTypes.string,
-//   radius: PropTypes.number
-// };
-
-// TailSpin.defaultProps = {
-//   height: 80,
-//   width: 80,
-//   color: "green",
-//   radius: 1,
-//   label: "audio-loading"
-// };
