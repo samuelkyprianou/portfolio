@@ -16,41 +16,41 @@ function App() {
 
   useEffect(() => {
     const imgs = [
-      "./images/webp/food-find1.webp",
-      "./images/webp/food-find2.webp",
-      "./images/webp/food-find3.webp",
-      "./images/webp/snappy-parking1.webp",
-      "./images/webp/snappy-parking2.webp",
-      "./images/webp/snappy-parking3.webp",
-      "./images/webp/snappy-parking4.webp",
-      "./images/webp/umber1.webp",
-      "./images/webp/umber2.webp",
-      "./images/webp/umber3.webp",
-      "./images/webp/volta1.webp",
-      "./images/webp/volta2.webp",
-      "./images/webp/volta3.webp",
-      "./images/background.png",
-      "./images/food-find.png",
-      "./images/food-find1.png",
-      "./images/food-find2.png",
-      "./images/food-find3.png",
-      "./images/profile.jpeg",
-      "./images/profile.webp",
-      "./images/snappy-parking.png",
-      "./images/snappy-parking1.png",
-      "./images/snappy-parking2.png",
-      "./images/snappy-parking3.png",
-      "./images/snappy-parking4.png",
-      "./images/stars.png",
-      "./images/twinkling.png",
-      "./images/umber.png",
-      "./images/umber1.png",
-      "./images/umber2.png",
-      "./images/umber3.png",
-      "./images/volta.png",
-      "./images/volta1.png",
-      "./images/volta2.png",
-      "./images/volta3.png",
+      require("./images/webp/food-find1.webp"),
+      require("./images/webp/food-find2.webp"),
+      require("./images/webp/food-find3.webp"),
+      require("./images/webp/snappy-parking1.webp"),
+      require("./images/webp/snappy-parking2.webp"),
+      require("./images/webp/snappy-parking3.webp"),
+      require("./images/webp/snappy-parking4.webp"),
+      require("./images/webp/umber1.webp"),
+      require("./images/webp/umber2.webp"),
+      require("./images/webp/umber3.webp"),
+      require("./images/webp/volta1.webp"),
+      require("./images/webp/volta2.webp"),
+      require("./images/webp/volta3.webp"),
+      require("./images/background.png"),
+      require("./images/food-find.png"),
+      require("./images/food-find1.png"),
+      require("./images/food-find2.png"),
+      require("./images/food-find3.png"),
+      require("./images/profile.jpeg"),
+      require("./images/profile.webp"),
+      require("./images/snappy-parking.png"),
+      require("./images/snappy-parking1.png"),
+      require("./images/snappy-parking2.png"),
+      require("./images/snappy-parking3.png"),
+      require("./images/snappy-parking4.png"),
+      require("./images/stars.png"),
+      require("./images/twinkling.png"),
+      require("./images/umber.png"),
+      require("./images/umber1.png"),
+      require("./images/umber2.png"),
+      require("./images/umber3.png"),
+      require("./images/volta.png"),
+      require("./images/volta1.png"),
+      require("./images/volta2.png"),
+      require("./images/volta3.png"),
     ];
     cacheImages(imgs);
   }, []);
@@ -59,10 +59,9 @@ function App() {
     const promises = await srcArray.map((src) => {
       return new Promise(function (resolve, reject) {
         let img = new Image();
-        img = src;
+        img.src = src;
         img.onload = resolve();
         img.onerror = reject();
-        console.log(img);
       });
     });
     await Promise.all(promises);
