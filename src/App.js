@@ -6,13 +6,12 @@ import Portfolio from "./screens/portfolio";
 import Contact from "./screens/contact";
 import Footer from "./components/Footer";
 import SideContent from "./components/SideContent";
-import { TailSpin } from "./components/Spinner.js";
-import ScrollAnimation from "react-animate-on-scroll";
+import Loader from "./components/Loader"
 import "animate.css/animate.compat.css";
 import "./StyleSheets/App.css";
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
+const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     const imgs = [
@@ -64,38 +63,17 @@ function App() {
         img.onerror = reject();
       });
     });
-    await Promise.all(promises).then((values) =>
-      setTimeout(function () {
-        setIsLoading(false);
-      }, 5000)
-    );
+    await Promise.all(promises)
+    const animated = document.querySelector('.animated');
+    animated.addEventListener('animationend', () => {
+      setTimeout(function () {setIsLoading(false);}, 2000)
+    });
   };
 
   return (
     <>
       {isLoading ? (
-        <div
-          className="loader"
-          style={{
-            height: "100vh",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            backgroundColor: "black",
-          }}
-        >
-          <TailSpin />
-
-          <ScrollAnimation
-            animateIn="fadeIn"
-            duration={1.5}
-            animateOnce={true}
-            delay={1000}
-            className="loading-text"
-          >
-            SK
-          </ScrollAnimation>
-        </div>
+       <Loader/>
       ) : (
         <div className="app">
           <Navb />

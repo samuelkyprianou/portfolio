@@ -20,6 +20,7 @@ export const TailSpin = () => (
       <g transform="translate(1 1)">
         <circle fill="#9c0039" cx="18" cy="0" r={1}>
           <animateTransform
+          className="animate"
             attributeName="transform"
             type="rotate"
             from="360 18 18"
