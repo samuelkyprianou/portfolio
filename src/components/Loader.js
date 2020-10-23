@@ -3,6 +3,7 @@ import { TailSpin } from "./TailSpin.js";
 import ScrollAnimation from "react-animate-on-scroll";
 
 export default function Loader({ setIsLoading }) {
+
   useEffect(() => {
     const imgs = [
       require("../images/webp/food-find1.webp"),
@@ -48,15 +49,16 @@ export default function Loader({ setIsLoading }) {
     const promises = await srcArray.map((src) => {
       return new Promise(function (resolve, reject) {
         let img = new Image();
+        img.onload = function(){resolve(src)};
+        img.onerror = function(){reject(src)};
         img.src = src;
-        img.onload = resolve(img);
-        img.onerror = reject(img);
-      });
+      })
     });
-    await Promise.all(promises);
-    setTimeout(function () {
-      setIsLoading(false);
-    }, 5000);
+    await Promise.allSettled(promises)
+      setTimeout(function () {
+        setIsLoading(false);
+      }, 5000)
+
   };
 
   return (
