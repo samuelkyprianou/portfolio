@@ -64,8 +64,11 @@ function App() {
         img.onerror = reject();
       });
     });
-    await Promise.all(promises);
-    setTimeout(function(){setIsLoading(false)},5500)
+    await Promise.all(promises).then((values) =>
+      setTimeout(function () {
+        setIsLoading(false);
+      }, 5000)
+    );
   };
 
   return (
@@ -81,7 +84,7 @@ function App() {
             backgroundColor: "black",
           }}
         >
-          <TailSpin  />
+          <TailSpin />
 
           <ScrollAnimation
             animateIn="fadeIn"
