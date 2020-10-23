@@ -8,7 +8,10 @@ import "./index.css"
 
 
 ReactDOM.render(
-    <App />,
+  <>
+    <App />
+  <div id="background_wrap"></div>
+  </>,
   document.getElementById('root') 
 );
 
