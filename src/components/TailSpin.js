@@ -9,13 +9,7 @@ export const TailSpin = () => (
     xmlns="http://www.w3.org/2000/svg"
     aria-label="loading"
   >
-    <defs>
-      <linearGradient x1="8.042%" y1="0%" x2="65.682%" y2="23.865%" id="a">
-        <stop stopColor="white" stopOpacity="0" offset="0%" />
-        <stop stopColor="white" stopOpacity="0" offset="83.146%" />
-        <stop stopColor="white" offset="100%" />
-      </linearGradient>
-    </defs>
+   
     <g fill="none" fillRule="evenodd">
       <g transform="translate(1 1)">
         <circle fill="#9c0039" cx="18" cy="0" r={1}>

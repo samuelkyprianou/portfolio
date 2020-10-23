@@ -42,9 +42,6 @@ export default function Loader({ setIsLoading }) {
       require("../images/volta3.png"),
     ];
     cacheImages(imgs);
-    // setTimeout(function () {
-    //   setIsLoading(false);
-    // }, 5000);
   });
 
   const cacheImages = async (srcArray) => {
@@ -52,11 +49,14 @@ export default function Loader({ setIsLoading }) {
       return new Promise(function (resolve, reject) {
         let img = new Image();
         img.src = src;
-        img.onload = resolve();
-        img.onerror = reject();
+        img.onload = resolve(img);
+        img.onerror = reject(img);
       });
     });
-    await Promise.all(promises).then(() => console.log("finished"))
+    await Promise.all(promises);
+    setTimeout(function () {
+      setIsLoading(false);
+    }, 5000);
   };
 
   return (
