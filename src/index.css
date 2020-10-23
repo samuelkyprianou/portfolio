@@ -31,7 +31,7 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  #root {
+  #background_wrap {
     background: linear-gradient(
         189deg,
         rgba(0, 0, 0, 1) 8%,

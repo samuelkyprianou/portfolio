@@ -42,10 +42,9 @@ export default function Loader({ setIsLoading }) {
       require("../images/volta3.png"),
     ];
     cacheImages(imgs);
-    setTimeout(function () {
-      setIsLoading(false);
-      console.log("loader finisher")
-    }, 5000);
+    // setTimeout(function () {
+    //   setIsLoading(false);
+    // }, 5000);
   });
 
   const cacheImages = async (srcArray) => {
