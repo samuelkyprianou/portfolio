@@ -51,7 +51,7 @@ export default function ProjectModal({ open, id, handleModalClose }) {
 
   return (
     <Modal onClose={() => handleModalClose()} open={open}>
-      <div className="carousel-wrap" style={{ width: "100%" }}>
+      <div className="carousel-wrap" style={{ width: "100%"}}>
         <div className="window" ref={componentRef} style={{height: "100%"}}>
           <div id="carousel" style={{ left: width * -1 }}>
               {currentProject && getGalleryImages()}

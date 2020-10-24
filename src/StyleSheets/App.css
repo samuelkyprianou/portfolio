@@ -505,6 +505,7 @@
   text-align: center;
   padding: 15px;
   background-color: #000;
+  border-top: 1px double #9c0039 ;
 }
 
 .credit-wrapper {

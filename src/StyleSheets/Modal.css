@@ -61,6 +61,7 @@ body.dimmable > .dimmer {
 }
 
 .ui.modal {
+  width: 50%;
   top: 4vh;
   position: absolute;
   display: none;
@@ -87,37 +88,11 @@ body.dimmable > .dimmer {
 
 /* Modal Width */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   .ui.modal {
     width: 100%;
     margin: 0em 0em 0em 0em;
   }
 }
 
-@media only screen and (min-width: 601px) {
-  .ui.modal {
-    width: 500px;
-    margin: 0em 0em 0em 0em;
-  }
-}
 
-@media only screen and (min-width: 992px) {
-  .ui.modal {
-    width: 600px;
-    margin: 0em 0em 0em 0em;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .ui.modal {
-    width: 700px;
-    margin: 0em 0em 0em 0em;
-  }
-}
-
-@media only screen and (min-width: 1920px) {
-  .ui.modal {
-    width: 950px;
-    margin: 0em 0em 0em 0em;
-  }
-}
