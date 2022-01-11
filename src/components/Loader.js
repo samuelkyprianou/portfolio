@@ -6,6 +6,13 @@ export default function Loader({ setIsLoading }) {
 
   useEffect(() => {
     const imgs = [
+      require("../images/webp/shell-survey1.webp"),
+      require("../images/webp/shell-survey2.webp"),
+      require("../images/webp/shell-survey3.webp"),
+      require("../images/webp/shell-survey4.webp"),
+      require("../images/webp/shell-metals1.webp"),
+      require("../images/webp/shell-metals2.webp"),
+      require("../images/webp/shell-metals3.webp"),
       require("../images/webp/food-find1.webp"),
       require("../images/webp/food-find2.webp"),
       require("../images/webp/food-find3.webp"),
@@ -20,27 +27,10 @@ export default function Loader({ setIsLoading }) {
       require("../images/webp/volta2.webp"),
       require("../images/webp/volta3.webp"),
       require("../images/background.png"),
-      require("../images/food-find.png"),
-      require("../images/food-find1.png"),
-      require("../images/food-find2.png"),
-      require("../images/food-find3.png"),
       require("../images/profile.jpeg"),
       require("../images/profile.webp"),
-      require("../images/snappy-parking.png"),
-      require("../images/snappy-parking1.png"),
-      require("../images/snappy-parking2.png"),
-      require("../images/snappy-parking3.png"),
-      require("../images/snappy-parking4.png"),
       require("../images/stars.png"),
       require("../images/twinkling.png"),
-      require("../images/umber.png"),
-      require("../images/umber1.png"),
-      require("../images/umber2.png"),
-      require("../images/umber3.png"),
-      require("../images/volta.png"),
-      require("../images/volta1.png"),
-      require("../images/volta2.png"),
-      require("../images/volta3.png"),
     ];
     cacheImages(imgs);
   });

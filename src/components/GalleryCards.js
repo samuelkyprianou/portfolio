@@ -13,9 +13,9 @@ export default function GalleryCards({ openModel }) {
             if(isMobile) {
             openModel(project.id) }}}
           style={{
-            background: `url(${require("../images/" +
+            background: `url(${require("../images/webp/" +
               project.id +
-              ".png")}) center center/cover`,
+              ".webp")}) center center/cover`,
           }}
         ></div>
         <div className="text">

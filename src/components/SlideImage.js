@@ -1,16 +1,17 @@
 import React from "react";
-import ImgWithFallback from "../components/ImgWithFallback"
-
+import ImgWithFallback from "../components/ImgWithFallback";
 
 export default function SlideImage({ img, width, height }) {
-  const imageUrlPng = require(`../images/${img}.png`)
-  const imageUrlWebp = require(`../images/webp/${img}.webp`)
-
-
+  // const imageUrlPng = require(`../images/${img}.png`)
+  const imageUrlWebp = require(`../images/webp/${img}.webp`);
 
   return (
     <>
-        <ImgWithFallback src={imageUrlWebp} fallback={imageUrlPng} alt="slide" style={{width: width, height: height}}/>
+      <ImgWithFallback
+        src={imageUrlWebp}
+        alt="slide"
+        style={{ width: width, height: height }}
+      />
     </>
   );
 }
